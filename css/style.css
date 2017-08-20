@@ -1,0 +1,12 @@
+body {
+    font-family: Gilroy ExtraBold, Arial;
+    color: black;
+    font-size: 18pt; /*Нет общего какого-то стиля для всей странице. Поэтому пока указала самый популярный*/
+}
+
+.title {
+    font-size: 47pt;
+    color: black;
+    letter-spacing: 10px;
+    font-family: Gilroy ExtraBold, Arial;
+}
