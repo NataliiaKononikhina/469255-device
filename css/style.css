@@ -1,11 +1,12 @@
 body {
-    font-family: Gilroy ExtraBold, Arial;
-    color: black;
-    font-size: 18pt; /*Нет общего какого-то стиля для всей странице. Поэтому пока указала самый популярный*/
+    font-family: OpenSans Light, Arial;
+    color: #464646;
+    font-size: 15px;
+    line-height: 30px; 
 }
 
 .title {
-    font-size: 47pt;
+    font-size: 47px;
     color: black;
     letter-spacing: 10px;
     font-family: Gilroy ExtraBold, Arial;
