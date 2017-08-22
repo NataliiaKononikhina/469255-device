@@ -8,6 +8,6 @@ body {
 .title {
     font-size: 47px;
     color: black;
-    letter-spacing: 10px;
-    font-family: Gilroy ExtraBold, Arial;
+    letter-spacing: 0.01em;
+    font-family: "Gilroy ExtraBold", "Arial";
 }
