@@ -7,13 +7,13 @@
     </head>
     <body>
         <header>
-            <a href="index.html"><img src="img/logo.png" width="164" height="36" alt="Device"></a>
+            <a href="index.html"><img src="img/logo.png" width="164" height="36" alt="Device" class="device"></a>
             <div>
                 <form>
                     <i class="search-icon"></i>
                     <label class="visually-hidden">Поиск по сайту</label>
                     <input type="text" placeholder="Поиск по сайту">
-                    <input type="submit" value="Найти">
+                    <input type="submit" value="Найти" class="search">
                 </form>
                 <div class="products-catalog">
                     <p>Каталог товаров</p>
@@ -35,9 +35,9 @@
                     <li><a href="#"><i class="icon"></i><span>Корзина</span></a></li>
                 </ul>
                 <ul>
-                    <li><a href="#">Доставка</a></li>
-                    <li><a href="#">Гарантия</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li class="delivery-contacts"><a href="#">Доставка</a></li>
+                    <li class="delivery-contacts"><a href="#">Гарантия</a></li>
+                    <li class="delivery-contacts"><a href="#">Контакты</a></li>
                 </ul>
             </nav>
         </header>
@@ -51,8 +51,8 @@
             </ul>
             
             <section>
-                <h2>Фильтр:</h2>
-                <form>
+                <h2 class="filter">Фильтр:</h2>
+                <form class="filter-form">
                     <div>
                         <label for="cost">Стоимость</label>
                         <input type="range" id="cost">
@@ -91,21 +91,21 @@
                             <label for="bluetooth-no">Нет</label>
                         </div>
                     </fieldset>
-                    <input type="submit" value="Показать">
+                    <input type="submit" value="Показать" class="button-on-line">
                 </form>
             </section>
-            <section>
+            <section class="catalog">
                 <h2 class="visually-hidden">Каталог товаров</h2>
-                <div>
-                    <span>Сортировка:</span>
+                <div class="sorting-block">
+                    <span class="sorting">Сортировка:</span>
                     <ul>
-                        <li class="activ"><a href="#">По цене</a></li>
-                        <li><a href="#">По типу</a></li>
-                        <li><a href="#">По популярности</a></li>
+                        <li><a href="#" class="sorting-option">По цене</a></li>
+                        <li><a href="#" class="sorting-option">По типу</a></li>
+                        <li><a href="#" class="sorting-option">По популярности</a></li>
                     </ul>
                     <div>
-                        <a href="#">По возрастанию</a>
-                        <a href="#">По убыванию</a>
+                        <a href="#" class="up">По возрастанию</a>
+                        <a href="#" class="down">По убыванию</a>
                     </div>
                 </div>
                 <ul>
@@ -116,7 +116,7 @@
                             <p class="price">500 руб.</p>
                             <div>
                                 <button>В корзину</button>
-                                <button>Добавить к сравнению</button>
+                                <button class="comparison">Добавить к сравнению</button>
                             </div>
                             <span>New</span>
                         </article>
@@ -128,7 +128,7 @@
                             <p class="price">1500 руб.</p>
                             <div>
                                 <button>В корзину</button>
-                                <button>Добавить к сравнению</button>
+                                <button class="comparison">Добавить к сравнению</button>
                             </div>
                             <span>New</span>
                         </article>
@@ -140,7 +140,7 @@
                             <p class="price">2500 руб.</p>
                             <div>
                                 <button>В корзину</button>
-                                <button>Добавить к сравнению</button>
+                                <button class="comparison">Добавить к сравнению</button>
                             </div>
                             <span>New</span>
                         </article>
@@ -152,30 +152,30 @@
                             <p class="price">4900 руб.</p>
                             <div>
                                 <button>В корзину</button>
-                                <button>Добавить к сравнению</button>
+                                <button class="comparison">Добавить к сравнению</button>
                             </div>
                             <span>New</span>
                         </article>
                     </li>
                 </ul>
-                <div>
-                    <button>Назад</button>
+                <div class="page-navigation">
+                    <button class="back">Назад</button>
                     <ul>
-                        <li class="activ"><button>1</button></li>
-                        <li><button>2</button></li>
-                        <li><button>3</button></li>
+                        <li><button class="page-number">1</button></li>
+                        <li><button class="page-number">2</button></li>
+                        <li><button class="page-number">3</button></li>
                     </ul>
-                    <button>Вперед</button>
+                    <button class="forward">Вперед</button>
                 </div>
             </section>
         </main>
 
         <footer>
-            <div>
-                <a href="index.html"><img src="img/logo.png" width="164" height="36" alt="Device"></a>
+            <div class="first-column">
+                <a href="index.html"><img src="img/logo_yellow.png" width="164" height="36" alt="Device" class="device"></a>
                 <p>г.Москва, ул.Строителей, 15</p>
             </div>
-            <div>
+            <div class="second-column">
                 <ul>
                     <li><a href="#">Доставка</a></li>
                     <li><a href="#">Гарантия</a></li>
@@ -187,7 +187,7 @@
                     <li><a href="#"><img src="#" class="social-icon" alt="Twitter"></a></li>
                 </ul>
             </div>
-            <div>
+            <div class="third-column">
                 <ul>
                     <li><a href="#"><i class="icon"></i><span>Войти</span></a></li>
                     <li><a href="#"><i class="icon"></i><span>Сравнить</span></a></li>

@@ -7,13 +7,13 @@
     </head>
     <body>
         <header>
-            <a><img src="img/logo.png" width="164" height="36" alt="Device"></a>
+            <a href="#"><img src="img/logo.png" width="164" height="36" alt="Device" class="device"></a>
             <div>
                 <form>
                     <i class="search-icon"></i>
                     <label class="visually-hidden">Поиск по сайту</label>
                     <input type="text" placeholder="Поиск по сайту">
-                    <input type="submit" value="Найти">
+                    <input type="submit" value="Найти" class="search">
                 </form>
                 <div class="products-catalog">
                     <p>Каталог товаров</p>
@@ -35,9 +35,9 @@
                     <li><a href="#"><i class="icon"></i><span>Корзина</span></a></li>
                 </ul>
                 <ul>
-                    <li><a href="#">Доставка</a></li>
-                    <li><a href="#">Гарантия</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li class="delivery-contacts"><a href="#">Доставка</a></li>
+                    <li class="delivery-contacts"><a href="#">Гарантия</a></li>
+                    <li class="delivery-contacts"><a href="#">Контакты</a></li>
                 </ul>
             </nav>
         </header>
@@ -57,7 +57,9 @@
                                 <p>Самая длинная палка для селфи доступна в нашем магазине.
                                     Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
                                 </p>
-                                <a href="#">Подробнее</a>
+                                <div class="button-on-line">
+                                    <a href="#">Подробнее</a>
+                                </div>
                                 <dl>
                                     <dt class="value">8,5 м</dt>
                                     <dd class="description">Длина палки</dd>                          
@@ -120,37 +122,37 @@
                     <li>
                         <a href="#">
                             <img src="#" alt="Виртуальная реальность">
-                            <span>Виртуальная реальность</span>
+                            <span class="popular-goods">Виртуальная реальность</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <img src="#" alt="Монопады для селфи">
-                            <span>Монопады для селфи</span>
+                            <span class="popular-goods">Монопады для селфи</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <img src="#" alt="Экшн-камеры">
-                            <span>Экшн-камеры</span>
+                            <span class="popular-goods">Экшн-камеры</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <img src="#" alt="Фитнесс браслеты">
-                            <span>Фитнесс браслеты</span>
+                            <span class="popular-goods">Фитнесс браслеты</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <img src="#" alt="Умные часы">
-                            <span>Умные часы</span>
+                            <span class="popular-goods">Умные часы</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <img src="#" alt="Квадрокоптеры">
-                            <span>Квадрокоптеры</span>
+                            <span class="popular-goods">Квадрокоптеры</span>
                         </a>
                     </li>
                 </ul>
@@ -159,9 +161,9 @@
             <section>
                 <h2 class="visually-hidden">Информация дополнительная</h2>
                 <ul class="delivery-menu">
-                    <li><a href="#">Доставка</a></li>
-                    <li><a href="#">Гарантия</a></li>
-                    <li><a href="#">Кредит</a></li>
+                    <li><a href="#" class="button-on-line">Доставка</a></li>
+                    <li><a href="#" class="button-on-line">Гарантия</a></li>
+                    <li><a href="#" class="button-on-line">Кредит</a></li>
                 </ul>
                 <section>
                     <h3 class="title">Доставка</h3>
@@ -197,7 +199,7 @@
                 </ul>
             </section>
 
-            <section>
+            <section class="about-us">
                 <h2 class="title">О нас</h2>
                 <p>
                     Огромный выбор гаджетов не оставит равнодушным гика,
@@ -208,11 +210,11 @@
                     России! DEVICE работает со многими транспортными компаниями:
                 </p>
                 <ul>
-                    <li>Деловые Линии</li>
-                    <li>Автотрейдинг</li>
-                    <li>ЖелДорЭкспедиции</li>
+                    <li class="li-about-us">Деловые Линии</li>
+                    <li class="li-about-us">Автотрейдинг</li>
+                    <li class="li-about-us">ЖелДорЭкспедиции</li>
                 </ul>
-                <a href="#">Подробнее о нас</a>
+                <a href="#" class="button-on-line">Подробнее о нас</a>
             </section>
 
             <section>
@@ -222,7 +224,7 @@
                     проверить работоспособность покупки. Всякое бывает.
                 </p>
                 <a href="#"><img src="img/map.jpg" width="560" height="222" alt="г.Москва, ул.Строителей, 15"></a>
-                <a href="#">Напишите нам</a>
+                <a href="#" class="button-on-line">Напишите нам</a>
             </section>
                 
             <section>
@@ -231,30 +233,30 @@
                 <button>Закрыть</button>
             </section>
 
-            <section>
+            <section class="write-to-us">
                 <h2 class="visually-hidden">Напишите нам</h2>
                 <button>Закрыть</button>
                 <form>
                     <label>
-                        Ваше имя:<input type="text" placeholder="Представьтесь, пожалуйста">
+                        Ваше имя:<input type="text" placeholder="Представьтесь, пожалуйста" class="text">
                     </label>
                     <label>
-                        Ваш e-mail:<input type="text" placeholder="Для отпраки ответа">
+                        Ваш e-mail:<input type="text" placeholder="Для отпраки ответа" class="text">
                     </label>
                     <label>
-                        Текст письма:<textarea placeholder="В свободной форме"></textarea>
+                        Текст письма:<textarea rows="5" placeholder="В свободной форме" class="text"></textarea>
                     </label>
-                    <input type="submit" value="ОТПРАВИТЬ">
+                    <input type="submit" value="Отправить">
                 </form>
             </section>
         </main>
 
         <footer>
-            <div>
-                <a><img src="img/logo.png" width="164" height="36" alt="Device"></a>
+            <div class="first-column">
+                <a href="#"><img src="img/logo_yellow.png" width="164" height="36" alt="Device"></a>
                 <p>г.Москва, ул.Строителей, 15</p>
             </div>
-            <div>
+            <div class="second-column">
                 <ul>
                     <li><a href="#">Доставка</a></li>
                     <li><a href="#">Гарантия</a></li>
@@ -266,7 +268,7 @@
                     <li><a href="#"><img src="#" class="social-icon" alt="Twitter"></a></li>
                 </ul>
             </div>
-            <div>
+            <div class="third-column">
                 <ul>
                     <li><a href="#"><i class="icon"></i><span>Войти</span></a></li>
                     <li><a href="#"><i class="icon"></i><span>Сравнить</span></a></li>
