@@ -379,11 +379,14 @@ main .popular-goods {
     letter-spacing: 0.05em;
     text-transform: uppercase;
     text-align: center;
+    vertical-align: middle;
     color: rgba(0, 0, 0, 0.2);
-    border-radius: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 32px;
     border: 2px solid rgba(0, 0, 0, 0.1);
     background-color: transparent;
- 
+    display: inline-block;
 }
 
 .page-navigation {
