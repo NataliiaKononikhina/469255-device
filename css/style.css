@@ -50,47 +50,68 @@ button {
 }
 
 .visually-hidden {
-    visibility: hidden;
+    display: none;
 }
 
-li:not(.li-about-us) {
+li {
     list-style-type: none;
 }
 
 .button-on-line {
     position: relative;
+    font-family: "Gilroy ExtraBold", "Arial";
+    font-size: 18px;
+    letter-spacing: 0.2em;
+    line-height: normal;
+    text-transform: uppercase;
+    display: inline-block; 
+    padding: 15px 40px;  
 }
 
 .button-on-line::before {
     content: '';
     position: absolute;
-    top: 5px;
-    width: 200px;
-    height: 8px;
-    color: #f0c52e;
+    top: 23px;
+    left: 0;
+    background-color: #f0c52e;
+    display: inline-block;
+    width: 100%;
+    height: 15%;
+    z-index: -1;
 }
+
+.button-on-line:hover {
+    background-color: #f0c52e;
+}
+
+.button-on-line:active {
+    background-color: #f0c52e;
+    color: rgba(0, 0, 0, 0.3)
+}
+
+/* ========HEADER=========*/
 
 header {
     line-height: 36px;
     background-color: #f7e296;
 }
 
-header a img:hover,
-header a:hover,
-footer a img:hover,
+.device:hover,
+header .products-catalog .menu:hover,
+.сatalog-in-header:hover,
 footer .second-column ul:first-child li:hover {
     opacity: 0.6;
 }
 
-header a img:active,
-header a:active, 
+.device:active,
+header .products-catalog .menu:active, 
+.сatalog-in-header:active,
 main .popular-goods:active,
-footer a img:active,
 footer .second-column ul:first-child li:active {
     opacity: 0.3;
 }
 
-header .products-catalog p,
+header .сatalog-in-header,
 header .delivery-contacts {
     font-family: "Gilroy ExtraBold", "Arial";
     font-size: 18px;
@@ -98,6 +119,70 @@ header .delivery-contacts {
     line-height: normal;
     text-transform: uppercase;
 }
+
+.site-search {
+    background: none;
+    border: none;
+    line-height: 36px;
+}
+
+.site-search::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.site-search:hover::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.site-search:focus {
+    border-bottom: 1px solid black;
+}
+
+.search-in-header {
+    visibility: hidden;
+}
+
+.site-search:focus + .search-in-header {
+    background: none;
+    border: 1px solid black;
+    line-height: 36px;
+    padding: 0 15px;
+    visibility: visible;
+}
+
+.site-search:focus + .search-in-header:hover {
+    background: black;
+    border: 1px solid black;
+    color: white;
+    visibility: visible;
+}
+
+.search-in-header:active {
+    background: black;
+    border: 1px solid black;
+    color: rgba(255, 255, 255, 0.3);
+    visibility: visible;
+    line-height: 36px;
+    padding: 0 15px;
+}
+
+.menu {
+    display: none;
+}
+
+.products-catalog:hover .menu {
+    display: block;
+}
+
+.menu:hover {
+    display: block;
+}
+
+.menu:active {
+    display: block;
+}
+
+/* ========MAIN=========*/
 
 .counter {
     font-family: "Gilroy ExtraBold", "Arial";
@@ -132,12 +217,11 @@ main .popular-goods {
 
 .about-us li {
     font-family: "Gilroy ExtraBold", "Arial";
+    list-style-type: none;
 }
 
 .write-to-us {
     background-color: white;
-    width: 960px;
-    height: 553px;
 }
 
 .write-to-us label {
@@ -174,22 +258,22 @@ main .popular-goods {
     font-size: 14px;
     line-height: 36px;
     opacity: 0.3;
+    list-style-type: none;
 }
 
-#breadcrumbs-one li:hover {
+#breadcrumbs-one li:not(:last-child):hover {
     opacity: 0.6;
 }
 
-#breadcrumbs-one li:active {
+#breadcrumbs-one li:not(:last-child):active {
     opacity: 0.1;
 }
 
 .filter {
     background-color: #dcdcdc;
-    width: 466px;
-    height: 70px;
     font-family: "Gilroy ExtraBold", "Arial";
     font-size: 18px;
+    letter-spacing: 0.01em;
     text-transform: uppercase;
     color: black;
     text-align: center;
@@ -197,14 +281,28 @@ main .popular-goods {
 
 .filter-form {
     background-color: #efefef;
-    width: 466px;
-    height: 1214px;
+}
+
+.filter-form fieldset {
+    border: none;
+}
+
+.filter-form .filter-name {
+    font-family: "Gilroy ExtraBold", "Arial";
+    font-size: 18px;
+    letter-spacing: 0.01em;
+    line-height: normal;
+    color: black;
+}
+
+.filter-form .option {
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    line-height: 40px;
 }
 
 .sorting-block {
     background-color: #ebebeb;
-    width: 100%-466px;
-    height: 70px;
 }
 
 .sorting {
@@ -212,6 +310,7 @@ main .popular-goods {
     font-size: 18px;
     text-transform: uppercase;
     color: black;
+    letter-spacing: 0.01em;
 }
 
 .catalog h3 {
@@ -255,9 +354,7 @@ main .popular-goods {
     letter-spacing: 0.01em;
 }
 
-.catalog article div {
-    width: 360px;
-    height: 380px;
+.catalog .product div {
     background-color: #eeeeee;
     opacity: 0.7;
 }
@@ -283,8 +380,6 @@ main .popular-goods {
     text-transform: uppercase;
     text-align: center;
     color: rgba(0, 0, 0, 0.2);
-    width: 60px;
-    height: 60px;
     border-radius: 30px;
     border: 2px solid rgba(0, 0, 0, 0.1);
     background-color: transparent;
@@ -293,15 +388,13 @@ main .popular-goods {
 
 .page-navigation {
     background-color: #ebebeb;
-    width: 760px;
-    height: 70px;
     font-family: "Gilroy ExtraBold", "Arial";
     font-size: 16px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
 }
 
-.page-navigation button{
+.page-navigation button {
     font-family: "Gilroy ExtraBold", "Arial";
     font-size: 16px;
     letter-spacing: 0.2em;
@@ -310,37 +403,27 @@ main .popular-goods {
 
 .page-navigation .back,
 .page-navigation .forward {
-    width: 126px;
-    height: 70px;
     text-align: center;
 }
 
 .page-navigation .back:hover {
     background-color: #d9d9d9;
-    width: 126px;
-    height: 70px;
     text-align: center;
 }
 
 .page-navigation .back:active {
     background-color: #d9d9d9;
-    width: 126px;
-    height: 70px;
     text-align: center;
     color: rgba(0, 0, 0, 0.3);
 }
 
 .page-navigation .forward:hover {
     background-color: #d9d9d9;
-    width: 126px;
-    height: 70px;
     text-align: center;
 }
 
 .page-navigation .back:active {
     background-color: #d9d9d9;
-    width: 126px;
-    height: 70px;
     text-align: center;
     color: rgba(0, 0, 0, 0.3);
 }
@@ -357,10 +440,12 @@ main .popular-goods {
     opacity: 1;
 }
 
+
+/* ========FOOTER=========*/
+
 footer {
     color: white;
     background-color: #464646;
-    height: 327px;
 }
 
 footer a {
@@ -372,6 +457,8 @@ footer .second-column ul:first-child li {
     font-size: 18px;
     line-height: normal;
     letter-spacing: 0.2em;
+    text-transform: uppercase;
+    list-style-type: none;
 }
 
 footer .social-icon {
@@ -389,6 +476,7 @@ footer .social-icon:active {
 footer .third-column li {
     opacity: 0.7;
     line-height: 36px;
+    list-style-type: none;
 }
 
 footer .third-column li:hover {

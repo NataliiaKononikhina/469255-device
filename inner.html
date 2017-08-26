@@ -7,18 +7,18 @@
     </head>
     <body>
         <header>
-            <a href="index.html"><img src="img/logo.png" width="164" height="36" alt="Device" class="device"></a>
+            <a href="#"><img src="img/logo.png" width="164" height="36" alt="Device" class="device"></a>
             <div>
                 <form>
                     <i class="search-icon"></i>
                     <label class="visually-hidden">Поиск по сайту</label>
-                    <input type="text" placeholder="Поиск по сайту">
-                    <input type="submit" value="Найти" class="search">
+                    <input type="text" placeholder="Поиск по сайту" class="site-search">
+                    <input type="submit" value="Найти" class="search-in-header">
                 </form>
                 <div class="products-catalog">
-                    <p>Каталог товаров</p>
+                    <p class="сatalog-in-header">Каталог товаров</p>
                     <i class="plus"></i>
-                    <ul>
+                    <ul class="menu">
                         <li><a href="#">Виртуальная реальность</a></li>
                         <li><a href="#">Монопады для селфи</a></li>
                         <li><a href="#">Экшн-камеры</a></li>
@@ -54,41 +54,41 @@
                 <h2 class="filter">Фильтр:</h2>
                 <form class="filter-form">
                     <div>
-                        <label for="cost">Стоимость</label>
+                        <label for="cost" class="filter-name">Стоимость</label>
                         <input type="range" id="cost">
                     </div>
                     <fieldset>
-                        <legend>Цвет</legend>
+                        <legend class="filter-name">Цвет</legend>
                         <div>
                             <input type="checkbox" name="color" id="blаck">
-                            <label for="blаck">Черный</label>
+                            <label for="blаck" class="option">Черный</label>
                         </div>
                         <div>
                             <input type="checkbox" name="color" id="white">
-                            <label for="white">Белый</label>
+                            <label for="white" class="option">Белый</label>
                         </div>
                         <div>
                             <input type="checkbox" name="color" id="blue">
-                            <label for="blue">Синий</label>
+                            <label for="blue" class="option">Синий</label>
                         </div>
                         <div>
                             <input type="checkbox" name="color" id="red">
-                            <label for="red">Красный</label>
+                            <label for="red" class="option">Красный</label>
                         </div>
                         <div>
                             <input type="checkbox" name="color" id="pink">
-                            <label for="pink">Розовый</label>
+                            <label for="pink" class="option">Розовый</label>
                         </div>
                     </fieldset>
                     <fieldset>    
-                        <legend>Bluetooth</legend>
+                        <legend class="filter-name">Bluetooth</legend>
                         <div>
                             <input type="radio" name="bluetooth" value="Есть" id="bluetooth-is">
-                            <label for="bluetooth-is">Есть</label>
+                            <label for="bluetooth-is" class="option">Есть</label>
                         </div>
                         <div>
                             <input type="radio" name="bluetooth" value="Нет" id="bluetooth-no">
-                            <label for="bluetooth-no">Нет</label>
+                            <label for="bluetooth-no" class="option">Нет</label>
                         </div>
                     </fieldset>
                     <input type="submit" value="Показать" class="button-on-line">
@@ -111,7 +111,7 @@
                 <ul>
                     <li>
                         <article>
-                            <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
+                            <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка" class="product">
                             <h3><a href="#">Любительская селфи-палка</a></h3>
                             <p class="price">500 руб.</p>
                             <div>
@@ -123,7 +123,7 @@
                     </li>
                     <li>
                         <article>
-                            <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
+                            <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка" class="product">
                             <h3><a href="#">Профессиональная селфи-палка</a></h3>
                             <p class="price">1500 руб.</p>
                             <div>
@@ -135,7 +135,7 @@
                     </li>
                     <li>
                         <article>
-                            <img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
+                            <img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка" class="product">
                             <h3><a href="#">Непотопляемая селфи-палка</a></h3>
                             <p class="price">2500 руб.</p>
                             <div>
@@ -147,7 +147,7 @@
                     </li>
                     <li>
                         <article>
-                            <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка Следуй за мной">
+                            <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка Следуй за мной" class="product">
                             <h3><a href="#">Селфи-палка "Следуй за мной"</a></h3>
                             <p class="price">4900 руб.</p>
                             <div>
