@@ -50,7 +50,7 @@ button {
 }
 
 .visually-hidden {
-    display: none;
+    visibility: hidden;
 }
 
 li {
@@ -98,6 +98,7 @@ header {
 
 .device:hover,
 header .products-catalog .menu:hover,
+header .delivery-contacts:hover,
 .сatalog-in-header:hover,
 footer .second-column ul:first-child li:hover {
     opacity: 0.6;
@@ -105,6 +106,7 @@ footer .second-column ul:first-child li:hover {
 
 .device:active,
 header .products-catalog .menu:active, 
+header .delivery-contacts:active,
 .сatalog-in-header:active,
 main .popular-goods:active,
 footer .second-column ul:first-child li:active {
@@ -118,6 +120,7 @@ header .delivery-contacts {
     letter-spacing: 0.2em;
     line-height: normal;
     text-transform: uppercase;
+    color: black;
 }
 
 .site-search {
@@ -128,6 +131,7 @@ header .delivery-contacts {
 
 .site-search::placeholder {
     color: rgba(0, 0, 0, 0.3);
+    line-height: 36px;
 }
 
 .site-search:hover::placeholder {
@@ -196,17 +200,20 @@ header .delivery-contacts {
     font-size: 47px;
     color: black;
     letter-spacing: 0.01em;
+    line-height: normal;
 }
 
 main .value {
     font-family: "Gilroy Light", "Arial";
-    font-size: 36px;    
+    font-size: 36px; 
+    color: black;   
 }
 
 main .description {
     font-size: 13px;
     line-height: 20px;
     margin: 0;
+    color: black;
 }
 
 main .popular-goods {
@@ -363,14 +370,15 @@ main .popular-goods {
     font-size: 13x;
     line-height: 36px;
     opacity: 0.5;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .catalog .comparison:hover {
-    opacity: 1;
+    color: rgba(0, 0, 0, 1);
 }
 
 .catalog .comparison:active {
-    opacity: 0.2;
+    color: rgba(0, 0, 0, 0.2);
 }
 
 .catalog .new {
