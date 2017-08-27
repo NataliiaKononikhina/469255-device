@@ -110,18 +110,20 @@ header {
 }
 
 .device:hover,
-header .products-catalog .menu:hover,
+header .products-catalog .menu li:hover,
 header .delivery-contacts:hover,
 .сatalog-in-header:hover,
+header .login-menu .login-menu-item:hover,
 footer .second-column ul:first-child li:hover {
     opacity: 0.6;
 }
 
 .device:active,
-header .products-catalog .menu:active, 
+header .products-catalog .menu li:active, 
 header .delivery-contacts:active,
 .сatalog-in-header:active,
 main .popular-goods:active,
+header .login-menu .login-menu-item:active,
 footer .second-column ul:first-child li:active {
     opacity: 0.3;
 }
@@ -206,6 +208,31 @@ header .delivery-contacts {
     display: block;
 }
 
+header nav {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 45px;
+    width: 490px;
+}
+
+.login-menu {
+    display: flex;
+}
+
+.login-menu-item,
+.delivery-contacts {
+    margin: 20px;
+}
+
+.login-menu .compare,
+.contacts-menu .contacts {
+    margin-left: auto;
+}
+
+.contacts-menu {
+    display: flex;
+}
+
 /* ========MAIN=========*/
 
 .counter {
@@ -244,7 +271,10 @@ main .popular-goods {
 
 .about-us li {
     font-family: "Gilroy ExtraBold", "Arial";
+    font-size: 16px;
+    line-height: 40px;
     list-style-type: none;
+    color: black;
 }
 
 .write-to-us {
