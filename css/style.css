@@ -51,6 +51,13 @@ button {
 
 .visually-hidden {
     visibility: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
 }
 
 li {
@@ -94,6 +101,12 @@ li {
 header {
     line-height: 36px;
     background-color: #f7e296;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-wrapper {
+    display: flex;
 }
 
 .device:hover,
@@ -126,11 +139,18 @@ header .delivery-contacts {
 .site-search {
     background: none;
     border: none;
+    font-family: "OpenSans Light", "Arial";
+    font-size: 15px;
     line-height: 36px;
+    letter-spacing: 0.01em;
 }
 
 .site-search::placeholder {
     color: rgba(0, 0, 0, 0.3);
+    font-family: "OpenSans Light", "Arial";
+    font-size: 15px;
+    line-height: 36px;
+    letter-spacing: 0.01em;
     line-height: 36px;
 }
 
@@ -280,7 +300,7 @@ main .popular-goods {
     background-color: #dcdcdc;
     font-family: "Gilroy ExtraBold", "Arial";
     font-size: 18px;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
     color: black;
     text-align: center;
@@ -317,7 +337,7 @@ main .popular-goods {
     font-size: 18px;
     text-transform: uppercase;
     color: black;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.2em;
 }
 
 .catalog h3 {
