@@ -100,13 +100,21 @@ li {
 
 header {
     line-height: 36px;
-    background-color: #f7e296;
     display: flex;
     flex-direction: column;
 }
 
 .header-wrapper {
     display: flex;
+    padding: 40px 50px;
+    justify-content: space-between;
+    background-color: #f7e296;
+    width: 1060px;
+    height: 220px;
+}
+
+.header-wrapper-2 {
+    
 }
 
 .device:hover,
@@ -136,6 +144,10 @@ header .delivery-contacts {
     line-height: normal;
     text-transform: uppercase;
     color: black;
+}
+
+.form-search {
+    margin: 0 0 30px 0;
 }
 
 .site-search {
@@ -211,17 +223,19 @@ header .delivery-contacts {
 header nav {
     display: flex;
     flex-direction: column;
-    padding: 40px 45px;
-    width: 490px;
+    width: 530px;
+    
 }
 
 .login-menu {
     display: flex;
+    margin: 0 0 30px 0;
+    padding: 0;
 }
 
 .login-menu-item,
 .delivery-contacts {
-    margin: 20px;
+    margin: 0 20px;
 }
 
 .login-menu .compare,
@@ -231,9 +245,19 @@ header nav {
 
 .contacts-menu {
     display: flex;
+    margin: 0;
+    padding: 0;
 }
 
 /* ========MAIN=========*/
+
+.product-1,
+.product-2,
+.product-3 {
+    display: flex;
+    width: 1010px;
+    margin: 0 75px;
+}
 
 .counter {
     font-family: "Gilroy ExtraBold", "Arial";
@@ -263,10 +287,36 @@ main .description {
     color: black;
 }
 
+.popular-goods-wrapper {
+    display: flex;
+    width: 1160px;
+    justify-content: space-between;
+}
+
 main .popular-goods {
     font-family: "Gilroy ExtraBold", "Arial";
     font-size: 18px;
     line-height: normal;
+}
+
+.brands {
+    display: flex;
+    width: 1160px;
+    justify-content: space-around;
+}
+
+.about-cotacts-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 1160px;
+}
+
+.about-us {
+    width: 460px;
+}
+
+.section-contacts {
+    width: 560px;
 }
 
 .about-us li {
@@ -326,6 +376,10 @@ main .popular-goods {
     opacity: 0.1;
 }
 
+.filter-products-wrapper {
+    display: flex;
+}
+
 .filter {
     background-color: #dcdcdc;
     font-family: "Gilroy ExtraBold", "Arial";
@@ -338,6 +392,8 @@ main .popular-goods {
 
 .filter-form {
     background-color: #efefef;
+    height: 1213px;
+    width: 468px;
 }
 
 .filter-form fieldset {
@@ -360,6 +416,7 @@ main .popular-goods {
 
 .sorting-block {
     background-color: #ebebeb;
+    display: flex;
 }
 
 .sorting {
@@ -507,6 +564,14 @@ main .popular-goods {
 footer {
     color: white;
     background-color: #464646;
+    padding-top: 65px;
+    height: 260px;
+}
+
+.footer-wrapper {
+    display: flex;
+    width: 1160px;
+    margin: 0 auto;
 }
 
 footer a {
@@ -522,6 +587,27 @@ footer .second-column ul:first-child li {
     list-style-type: none;
 }
 
+.second-column {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    align-items: center;
+    margin-top: 75px;
+}
+
+.contacts-menu-in-footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    width: 440px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-between;
+}
+
 footer .social-icon {
     opacity: 0.3;
 }
@@ -534,10 +620,27 @@ footer .social-icon:active {
     opacity: 0.1;
 }
 
+.third-column {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.login-menu-in-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+footer .delivery-contacts a {
+    line-height: 36px;
+}
+
 footer .third-column li {
     opacity: 0.7;
-    line-height: 36px;
     list-style-type: none;
+    margin-left: 35px;
 }
 
 footer .third-column li:hover {
