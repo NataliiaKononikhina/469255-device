@@ -6,7 +6,7 @@
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
-        <header>
+        <header class="main-header">
             <a href="#"><img src="img/logo.png" width="164" height="36" alt="Device" class="device"></a>
              <div class="header-wrapper">    
                 <div class="header-wrapper-2">
@@ -18,16 +18,16 @@
                     <div class="products-catalog">
                         <p class="сatalog-in-header">Каталог товаров</p>
                         <ul class="menu">
-                            <li><a href="#">Виртуальная реальность</a></li>
-                            <li><a href="#">Монопады для селфи</a></li>
-                            <li><a href="#">Экшн-камеры</a></li>
-                            <li><a href="#">Фитнес-браслеты</a></li>
-                            <li><a href="#">Умные часы</a></li>
-                            <li><a href="#">Квадрокоптеры</a></li>
+                            <li class="menu-item"><a href="#">Виртуальная реальность</a></li>
+                            <li class="menu-item"><a href="#">Монопады для селфи</a></li>
+                            <li class="menu-item"><a href="#">Экшн-камеры</a></li>
+                            <li class="menu-item"><a href="#">Фитнес-браслеты</a></li>
+                            <li class="menu-item"><a href="#">Умные часы</a></li>
+                            <li class="menu-item"><a href="#">Квадрокоптеры</a></li>
                         </ul>
                     </div>
                 </div>
-                <nav>
+                <nav class="navigation">
                     <ul class="login-menu">
                         <li class="login-menu-item"><a href="#">Войти</a></li>
                         <li class="login-menu-item compare"><a href="#">Сравнить</a></li>
@@ -49,7 +49,7 @@
                 <h2 class="visually-hidden">Товары</h2>
                 <ul>
                     <li>
-                        <section class="product-1">
+                        <section class="product">
                             <img src="img/slider-1.png" width="384" height="486" alt="Селфи-палка">
                             <div class="counter">01</div>
                             <div>
@@ -68,7 +68,7 @@
                                 </dl>
                             </div>
                         </section>
-                        <section class="product-2">
+                        <section class="product">
                             <img src="img/slider-2.png" width="345" height="485" alt="Фитнес-браслеты">
                             <div class="counter">02</div>
                             <div>
@@ -83,7 +83,7 @@
                                 </dl>
                             </div>
                         </section>
-                        <section class="product-3">
+                        <section class="product">
                             <img src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
                             <div class="counter">03</div>
                             <div>
@@ -226,13 +226,13 @@
                 <h2 class="visually-hidden">Напишите нам</h2>
                 <button>Закрыть</button>
                 <form>
-                    <label>
-                        Ваше имя:<input type="text" placeholder="Представьтесь, пожалуйста" class="text invalid">
+                    <label class="form-to-us">
+                        Ваше имя:<input type="text" placeholder="Представьтесь, пожалуйста" class="text">
                     </label>
-                    <label>
-                        Ваш e-mail:<input type="email" placeholder="Для отпраки ответа" class="text invalid">
+                    <label class="form-to-us">
+                        Ваш e-mail:<input type="email" placeholder="Для отпраки ответа" class="text">
                     </label>
-                    <label>
+                    <label class="form-to-us">
                         Текст письма:<textarea rows="5" placeholder="В свободной форме" class="text"></textarea>
                     </label>
                     <input type="submit" value="Отправить" class="button-on-line">
@@ -248,9 +248,9 @@
                 </div>
                 <div class="second-column">
                     <ul class="contacts-menu-in-footer">
-                        <li><a href="#">Доставка</a></li>
-                        <li><a href="#">Гарантия</a></li>
-                        <li><a href="#">Контакты</a></li>
+                        <li class="delivery-in-footer"><a href="#">Доставка</a></li>
+                        <li class="delivery-in-footer"><a href="#">Гарантия</a></li>
+                        <li class="delivery-in-footer"><a href="#">Контакты</a></li>
                     </ul>
                     <ul class="social-icons">
                         <li><a href="#"><img src="#" class="social-icon" alt="Facebook"></a></li>
@@ -260,9 +260,9 @@
                 </div>
                 <div class="third-column">
                     <ul class="login-menu-in-footer">
-                        <li><a href="#">Войти</a></li>
-                        <li><a href="#">Сравнить</a></li>
-                        <li><a href="#">Корзина</a></li>
+                        <li class="login-in-footer"><a href="#">Войти</a></li>
+                        <li class="login-in-footer"><a href="#">Сравнить</a></li>
+                        <li class="login-in-footer"><a href="#">Корзина</a></li>
                     </ul>
                     <p>Тел.: +7(495)495-95-95</p>
                     <a href="#"><img src="#" alt="htmlacademy"></a>

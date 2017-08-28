@@ -44,11 +44,6 @@ a {
     color: black;
 }
 
-button {
-    border: none;
-    background: none;
-}
-
 .visually-hidden {
     visibility: hidden;
     position: absolute;
@@ -60,10 +55,6 @@ button {
     clip: rect(0 0 0 0);
 }
 
-li {
-    list-style-type: none;
-}
-
 .button-on-line {
     position: relative;
     font-family: "Gilroy ExtraBold", "Arial";
@@ -73,6 +64,8 @@ li {
     text-transform: uppercase;
     display: inline-block; 
     padding: 15px 40px;  
+    border: none;
+    background: transparent;
 }
 
 .button-on-line::before {
@@ -98,7 +91,7 @@ li {
 
 /* ========HEADER=========*/
 
-header {
+.main-header {
     line-height: 36px;
     display: flex;
     flex-direction: column;
@@ -113,26 +106,22 @@ header {
     height: 220px;
 }
 
-.header-wrapper-2 {
-    
-}
-
 .device:hover,
-header .products-catalog .menu li:hover,
+header .menu-item:hover,
 header .delivery-contacts:hover,
 .сatalog-in-header:hover,
-header .login-menu .login-menu-item:hover,
-footer .second-column ul:first-child li:hover {
+header .login-menu-item:hover,
+footer .delivery-in-footer:hover {
     opacity: 0.6;
 }
 
 .device:active,
-header .products-catalog .menu li:active, 
+header .menu-item:active, 
 header .delivery-contacts:active,
 .сatalog-in-header:active,
 main .popular-goods:active,
-header .login-menu .login-menu-item:active,
-footer .second-column ul:first-child li:active {
+header .login-menu-item:active,
+footer .delivery-in-footer:active {
     opacity: 0.3;
 }
 
@@ -206,21 +195,16 @@ header .delivery-contacts {
 
 .menu {
     display: none;
+    list-style-type: none;
 }
 
-.products-catalog:hover .menu {
-    display: block;
-}
-
-.menu:hover {
-    display: block;
-}
-
+.products-catalog:hover .menu,
+.menu:hover,
 .menu:active {
     display: block;
 }
 
-header nav {
+.main-header .navigation {
     display: flex;
     flex-direction: column;
     width: 530px;
@@ -231,6 +215,7 @@ header nav {
     display: flex;
     margin: 0 0 30px 0;
     padding: 0;
+    list-style-type: none;
 }
 
 .login-menu-item,
@@ -247,13 +232,12 @@ header nav {
     display: flex;
     margin: 0;
     padding: 0;
+    list-style-type: none;
 }
 
 /* ========MAIN=========*/
 
-.product-1,
-.product-2,
-.product-3 {
+.product {
     display: flex;
     width: 1010px;
     margin: 0 75px;
@@ -291,6 +275,7 @@ main .description {
     display: flex;
     width: 1160px;
     justify-content: space-between;
+    list-style-type: none;
 }
 
 main .popular-goods {
@@ -299,10 +284,15 @@ main .popular-goods {
     line-height: normal;
 }
 
+.delivery-menu {
+    list-style-type: none;
+}
+
 .brands {
     display: flex;
     width: 1160px;
     justify-content: space-around;
+    list-style-type: none;
 }
 
 .about-cotacts-wrapper {
@@ -319,7 +309,7 @@ main .popular-goods {
     width: 560px;
 }
 
-.about-us li {
+.about-us .li-about-us {
     font-family: "Gilroy ExtraBold", "Arial";
     font-size: 16px;
     line-height: 40px;
@@ -331,7 +321,7 @@ main .popular-goods {
     background-color: white;
 }
 
-.write-to-us label {
+.write-to-us .form-to-us {
     font-family: "Gilroy ExtraBold", "Arial";
     font-size: 18px;
     line-height: 18px;
@@ -356,29 +346,45 @@ main .popular-goods {
     color: rgba(70, 70, 70, 1);
 }
 
-.write-to-us .invalid {
+.write-to-us .text:invalid {
     background-color: #f6dada;
     opacity: 0.5;
 }
 
-#breadcrumbs-one li {
+.breadcrumbs .crumb {
     font-size: 14px;
     line-height: 36px;
     opacity: 0.3;
     list-style-type: none;
 }
 
-#breadcrumbs-one li:not(:last-child):hover {
+.breadcrumbs .crumb:not(:last-child):hover {
     opacity: 0.6;
 }
 
-#breadcrumbs-one li:not(:last-child):active {
+.breadcrumbs .crumb:not(:last-child):active {
     opacity: 0.1;
 }
 
-.filter-products-wrapper {
+.wrapper-filter-sorting {
     display: flex;
 }
+
+.wrapper-filter-sorting .left {
+    flex: 1;
+    background-color: #dcdcdc;
+}
+
+.wrapper-filter-sorting .right {
+    flex: 1;
+    background-color: #ebebeb;
+}
+
+.section-filter-sorting {
+    display: flex;
+}
+
+
 
 .filter {
     background-color: #dcdcdc;
@@ -388,6 +394,9 @@ main .popular-goods {
     text-transform: uppercase;
     color: black;
     text-align: center;
+    width: 268px;
+    margin: 0;
+    padding: 20px 60px;
 }
 
 .filter-form {
@@ -396,7 +405,7 @@ main .popular-goods {
     width: 468px;
 }
 
-.filter-form fieldset {
+.filter-form .set-form {
     border: none;
 }
 
@@ -417,6 +426,8 @@ main .popular-goods {
 .sorting-block {
     background-color: #ebebeb;
     display: flex;
+    align-items: center;
+    width: 832px;
 }
 
 .sorting {
@@ -425,9 +436,43 @@ main .popular-goods {
     text-transform: uppercase;
     color: black;
     letter-spacing: 0.2em;
+    padding: 0 50px 0 70px;
 }
 
-.catalog h3 {
+.sorting-menu {
+    display: flex;
+    width: 500px;
+    justify-content: flex-start;
+    list-style-type: none;
+}
+
+.sorting-option {
+        margin-right: 20px;
+}
+
+.filter-products-wrapper {
+    display: flex;
+}
+
+.section-left {
+    flex: 1;
+    background-color: #efefef;
+}
+
+.section-right {
+    flex: 1;
+}
+
+.filter-catalog {
+    display: flex
+}
+
+.catalog {
+    width: 832px;
+    list-style-type: none;
+}
+
+.catalog .product-name {
     font-family: "Gilroy ExtraBold", "Arial";
     font-size: 18px;
     letter-spacing: 0.01em;
@@ -468,9 +513,11 @@ main .popular-goods {
     letter-spacing: 0.01em;
 }
 
-.catalog .product div {
+.catalog .background-for-buttons {
     background-color: #eeeeee;
     opacity: 0.7;
+    width: 360px;
+    height: 380px;
 }
 
 .catalog .comparison {
@@ -478,6 +525,8 @@ main .popular-goods {
     line-height: 36px;
     opacity: 0.5;
     color: rgba(0, 0, 0, 0.5);
+    border: none;
+    background: transparent;
 }
 
 .catalog .comparison:hover {
@@ -510,44 +559,44 @@ main .popular-goods {
     font-size: 16px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    width: 760px;
 }
 
-.page-navigation button {
+.page-navigation .back-forward {
     font-family: "Gilroy ExtraBold", "Arial";
     font-size: 16px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
+    border: none;
+    background: transparent;
 }
 
-.page-navigation .back,
-.page-navigation .forward {
+.page-navigation .back-forward {
     text-align: center;
 }
 
-.page-navigation .back:hover {
-    background-color: #d9d9d9;
-    text-align: center;
-}
-
-.page-navigation .back:active {
+.page-navigation .back-forward:active {
     background-color: #d9d9d9;
     text-align: center;
     color: rgba(0, 0, 0, 0.3);
 }
 
-.page-navigation .forward:hover {
+.page-navigation .back-forward:hover {
     background-color: #d9d9d9;
     text-align: center;
 }
 
-.page-navigation .back:active {
-    background-color: #d9d9d9;
-    text-align: center;
-    color: rgba(0, 0, 0, 0.3);
+.catalog-pages {
+    list-style-type: none;
+    display: flex;
 }
 
 .page-navigation .page-number {
     opacity: 0.3;
+    border: none;
+    background: transparent;
 }
 
 .page-navigation .page-number:hover {
@@ -578,7 +627,7 @@ footer a {
     color: white;
 }
 
-footer .second-column ul:first-child li {
+.second-column .delivery-in-footer {
     font-family: "Gilroy ExtraBold", "Arial";
     font-size: 18px;
     line-height: normal;
@@ -606,6 +655,7 @@ footer .second-column ul:first-child li {
 .social-icons {
     display: flex;
     justify-content: space-between;
+    list-style-type: none;
 }
 
 footer .social-icon {
@@ -637,16 +687,17 @@ footer .delivery-contacts a {
     line-height: 36px;
 }
 
-footer .third-column li {
+.third-column .login-in-footer {
     opacity: 0.7;
     list-style-type: none;
     margin-left: 35px;
+    list-style-type: none;
 }
 
-footer .third-column li:hover {
+.third-column .login-in-footer:hover {
     opacity: 1;
 }
 
-footer .third-column li:active {
+.third-column .login-in-footer:active {
     opacity: 0.3;
 }
