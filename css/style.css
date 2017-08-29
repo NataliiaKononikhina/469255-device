@@ -93,8 +93,16 @@ a {
 
 .main-header {
     line-height: 36px;
-    display: flex;
-    flex-direction: column;
+    margin: 0 auto;
+    padding-top: 40px;
+    width: 1160px;
+    position: relative;
+}
+
+header .device {
+    position: absolute;
+    top: 23px;
+    left: 60px;
 }
 
 .header-wrapper {
@@ -104,6 +112,7 @@ a {
     background-color: #f7e296;
     width: 1060px;
     height: 220px;
+    
 }
 
 .device:hover,
@@ -276,6 +285,7 @@ main .description {
     width: 1160px;
     justify-content: space-between;
     list-style-type: none;
+    margin: 0 auto;
 }
 
 main .popular-goods {
@@ -293,12 +303,14 @@ main .popular-goods {
     width: 1160px;
     justify-content: space-around;
     list-style-type: none;
+    margin: 0 auto;
 }
 
 .about-cotacts-wrapper {
     display: flex;
     justify-content: space-between;
     width: 1160px;
+    margin: 0 auto;
 }
 
 .about-us {
@@ -385,6 +397,18 @@ main .popular-goods {
 }
 
 
+.main-title {
+    margin: 0 auto;
+    width: 1100px;
+    padding-left: 60px;
+}
+
+.breadcrumbs {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
 
 .filter {
     background-color: #dcdcdc;
@@ -610,7 +634,7 @@ main .popular-goods {
 
 /* ========FOOTER=========*/
 
-footer {
+.footer {
     color: white;
     background-color: #464646;
     padding-top: 65px;
