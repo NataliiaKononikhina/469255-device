@@ -245,6 +245,7 @@ a {
 }
 
 /* ========MAIN=========*/
+/* ========index.html=========*/
 
 .slider {
     margin: 0 auto;
@@ -329,7 +330,7 @@ a {
 .slide-btn::before {
     width: 4px;
     height: 4px;
-    border-radius: ;
+    border-radius: 50%;
     border: 1px solid black;
     background-color: transparent;
     position: absolute;
@@ -340,15 +341,43 @@ a {
 .popular-goods-wrapper {
     display: flex;
     width: 1160px;
+    height: 250px;
     justify-content: space-between;
     list-style-type: none;
-    margin: 0 auto;
+    margin: 80px auto;
+    padding: 0;
+}
+
+.popular-good-item {
+    width: 160px;
+    position: relative;
+}
+
+.popular-good-link {
+    width: 160px;
+    height: 250px;
+    display: block;
+    position: relative;
+}
+
+.popular-good-link::before {
+    content: '';
+    width: 160px;
+    height: 160px;
+    background-color: #f7e296;
+    position: absolute;
+    background-image: url("img/popular-1.svg"); 
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }
 
 .popular-good {
     font-family: "Gilroy ExtraBold", "Arial";
     font-size: 18px;
     line-height: normal;
+    position: absolute;
+    top: 195px;
+    left: 0;
 }
 
 .services {
@@ -409,27 +438,74 @@ a {
     margin: 0;
 }
 
+.brands-wrapper {
+    position: relative;
+    margin: 100px auto;
+    width: 1160px;
+}
+
 .brands {
     display: flex;
     width: 1160px;
     justify-content: space-around;
     list-style-type: none;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
 }
+
+.brands-color {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo-color {
+    visibility: hidden; 
+}
+
+.logo-black-white:hover + .logo-color {
+    visibility: visible;
+} 
 
 .about-cotacts-wrapper {
     display: flex;
     justify-content: space-between;
     width: 1160px;
     margin: 0 auto;
+    margin-bottom: 90px;
 }
 
 .about-us {
     width: 460px;
 }
 
+.about-us .title,
+.section-contacts .title {
+    margin-bottom: 35px;
+}
+
+.about-us-text,
+.section-contacts-text {
+    margin-bottom: 40px; 
+}
+
+.about-us-list {
+    margin: 60px 0 50px 0;
+}
+
 .section-contacts {
     width: 560px;
+}
+
+.map-screenshot {
+    margin-bottom: 84px;
+}
+
+.map {
+    margin: 0 auto;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+    width: 960px;
+    height: 560px;
 }
 
 .about-us-tile {
@@ -442,12 +518,28 @@ a {
 
 .write-to-us {
     background-color: white;
+    width: 760px;
+    height: 390px;
+    padding: 95px 100px 75px 100px;
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
+    margin: 0 auto;
+}
+
+.feed-back-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feed-back{
+    width: 360px;
 }
 
 .feed-back {
     font-family: "Gilroy ExtraBold", "Arial";
     font-size: 18px;
     line-height: 18px;
+    display: flex;
+    flex-direction: column;
 }
 
 .text {
@@ -457,6 +549,16 @@ a {
     color: rgba(70, 70, 70, 0.4);
     background-color: #f2f2f2;
     border: none;
+    padding: 15px 20px;
+    margin-top: 10px;
+}
+
+.feed-back-leter {
+    width: 760px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+    margin-bottom: 40px;
 }
 
 .text:hover {
@@ -473,6 +575,8 @@ a {
     background-color: #f6dada;
     opacity: 0.5;
 }
+
+/* ========inner.html=========*/
 
 .main-title {
     margin: 0 auto;
@@ -541,11 +645,13 @@ a {
 .filter-form {
     background-color: #efefef;
     width: 330px;
-    display: block;
+    padding: 70px 70px 0 60px;
 }
 
 .filter-form .set-form {
     border: none;
+    border-top: 1px solid black;
+    padding: 5px 0 30px;
 }
 
 .filter-form .filter-name {
@@ -557,9 +663,11 @@ a {
 }
 
 .filter-form .option {
+    font-family: "OpenSans Light", "Arial";
     font-size: 14px;
     letter-spacing: 0.01em;
     line-height: 40px;
+    color: black;
 }
 
 .sorting-block {
@@ -608,10 +716,10 @@ a {
 }
 
 .goods-catalog {
-    width: 740px;
+    width: 760px;
     display: flex;
     flex-direction: column;
-    padding: 70px 20px 100px 70px;
+    padding: 70px 0 75px 70px;
 }
 
 .catalog {
@@ -621,10 +729,16 @@ a {
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
+    align-content: space-between;
 }
 
 .catalog-item {
     position: relative;
+}
+
+.goods-description {
+    display: flex;
+    width: 360px;
 }
 
 .catalog .product-name {
@@ -647,14 +761,20 @@ a {
     opacity: 1;
 }
 
-.catalog .up, 
-.catalog .down {
-    opacity: 0.2;
+.up {
+    border: 5px solid transparent;	
+    border-bottom: 10px solid rgba(0, 0, 0, 0.2);
+}
+
+.down {
+    border: 5px solid transparent;	
+    border-top: 10px solid rgba(0, 0, 0, 0.2);
+    margin-left: 20px;
 }
 
 .catalog .up:hover, 
 .catalog .down:hover {
-    opacity: 0.4;
+    border-top: 10px solid rgba(0, 0, 0, 0.4);
 }
 
 .catalog .up:active, 
@@ -666,11 +786,12 @@ a {
     font-family: "Gilroy Light", "Arial";
     font-size: 16px;
     letter-spacing: 0.01em;
+    width: 100px;
+    text-align: right;
 }
 
 .background-for-buttons {
-    background-color: #eeeeee;
-    opacity: 0.7;
+    background-color: rgba(238, 238, 238, 0.7);
     width: 360px;
     height: 380px;
     display: flex;
@@ -705,14 +826,15 @@ a {
     letter-spacing: 0.05em;
     text-transform: uppercase;
     text-align: center;
-    vertical-align: middle;
     color: rgba(0, 0, 0, 0.2);
     width: 60px;
     height: 60px;
     border-radius: 32px;
     border: 2px solid rgba(0, 0, 0, 0.1);
     background-color: transparent;
-    display: inline-block;
+    position: absolute;
+    top: 30px;
+    right: 30px;
 }
 
 .page-navigation {
@@ -789,6 +911,23 @@ a {
     color: white;
 }
 
+.footer .footer-logo {
+    font-family: "Gilroy ExtraBold", "Arial";
+    font-size: 48px;
+    line-height: normal;
+    letter-spacing: 0.01em;
+    color: #ffc600;
+    text-transform: uppercase;
+}
+
+.footer .footer-logo:hover {
+    color: rgba(255, 198, 0, 0.6);
+}
+
+.footer .footer-logo:active {
+    color: rgba(255, 198, 0, 0.3);
+}
+
 .footer-contacts-item {
     font-family: "Gilroy ExtraBold", "Arial";
     font-size: 18px;
@@ -837,6 +976,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    position: relative;
 }
 
 .footer-login-list {
@@ -862,4 +1002,13 @@ a {
 
 .footer-login-item:active {
     opacity: 0.3;
+}
+
+.htmlacademy::before {
+    content: '';
+    position: absolute;
+    width: 28px;
+    background-image: url("img/logo-html.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }

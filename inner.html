@@ -63,9 +63,9 @@
                             <li><a href="#" class="sorting-option">По типу</a></li>
                             <li><a href="#" class="sorting-option">По популярности</a></li>
                         </ul>
-                        <div>
-                            <a href="#" class="up">По возрастанию</a>
-                            <a href="#" class="down">По убыванию</a>
+                        <div class="up-down">
+                            <a href="#" class="up"><span class="visually-hidden">По возрастанию</span></a>
+                            <a href="#" class="down"><span class="visually-hidden">По убыванию</span></a>
                         </div>
                     </div>
                 </section>
@@ -76,11 +76,11 @@
                 <div class="section-left"></div>
                 <div class="filter-catalog">    
                     <form class="filter-form">
-                        <div>
+                        <div class="set-form">
                             <label for="cost" class="filter-name">Стоимость</label>
                             <input type="range" id="cost">
                         </div>
-                        <fieldset class="set-form">
+                        <div class="set-form">
                             <legend class="filter-name">Цвет</legend>
                             <div>
                                 <input type="checkbox" name="color" id="blаck">
@@ -102,8 +102,8 @@
                                 <input type="checkbox" name="color" id="pink">
                                 <label for="pink" class="option">Розовый</label>
                             </div>
-                        </fieldset>
-                        <fieldset class="set-form">    
+                        </div>
+                        <div class="set-form">    
                             <legend class="filter-name">Bluetooth</legend>
                             <div>
                                 <input type="radio" name="bluetooth" value="Есть" id="bluetooth-is">
@@ -113,7 +113,7 @@
                                 <input type="radio" name="bluetooth" value="Нет" id="bluetooth-no">
                                 <label for="bluetooth-no" class="option">Нет</label>
                             </div>
-                        </fieldset>
+                        </div>
                         <input type="submit" value="Показать" class="button-strip">
                     </form>
                 
@@ -123,8 +123,10 @@
                             <li>
                                 <article class="catalog-item">
                                     <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка" class="catalog-product">
-                                    <h3 class="product-name"><a href="#">Любительская селфи-палка</a></h3>
-                                    <p class="price">500 руб.</p>
+                                    <div class="goods-description">   
+                                        <h3 class="product-name"><a href="#">Любительская селфи-палка</a></h3>
+                                        <p class="price">500 руб.</p>
+                                    </div> 
                                     <div class="background-for-buttons">
                                         <button class="button-strip">В корзину</button>
                                         <button class="comparison">Добавить к сравнению</button>
@@ -135,8 +137,10 @@
                             <li>
                                 <article class="catalog-item">
                                     <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка" class="catalog-product">
-                                    <h3 class="product-name"><a href="#">Профессиональная селфи-палка</a></h3>
-                                    <p class="price">1500 руб.</p>
+                                    <div class="goods-description">
+                                        <h3 class="product-name"><a href="#">Профессиональная селфи-палка</a></h3>
+                                        <p class="price">1500 руб.</p>
+                                    </div>
                                     <div class="background-for-buttons">
                                         <button class="button-strip">В корзину</button>
                                         <button class="comparison">Добавить к сравнению</button>
@@ -147,8 +151,10 @@
                             <li>
                                 <article class="catalog-item">
                                     <img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка" class="catalog-product">
-                                    <h3 class="product-name"><a href="#">Непотопляемая селфи-палка</a></h3>
-                                    <p class="price">2500 руб.</p>
+                                    <div class="goods-description">
+                                        <h3 class="product-name"><a href="#">Непотопляемая селфи-палка</a></h3>
+                                        <p class="price">2500 руб.</p>
+                                    </div>
                                     <div class="background-for-buttons">
                                         <button class="button-strip">В корзину</button>
                                         <button class="comparison">Добавить к сравнению</button>
@@ -159,8 +165,10 @@
                             <li>
                                 <article class="catalog-item">
                                     <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка Следуй за мной" class="catalog-product">
-                                    <h3 class="product-name"><a href="#">Селфи-палка "Следуй за мной"</a></h3>
-                                    <p class="price">4900 руб.</p>
+                                    <div class="goods-description">
+                                        <h3 class="product-name"><a href="#">Селфи-палка "Следуй за мной"</a></h3>
+                                        <p class="price">4900 руб.</p>
+                                    </div>
                                     <div class="background-for-buttons">
                                         <button class="button-strip">В корзину</button>
                                         <button class="comparison">Добавить к сравнению</button>
@@ -187,7 +195,7 @@
         <footer class="footer">
             <div class="footer-wrapper">
                 <div class="footer-left">
-                    <a href="#"><img src="img/logo_yellow.png" width="164" height="36" alt="Device" class="footer-logo"></a>
+                    <a href="#" class="footer-logo">Device</a>
                     <p>г.Москва, ул.Строителей, 15</p>
                 </div>
                 <div class="footer-center">
