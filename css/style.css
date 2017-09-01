@@ -66,6 +66,7 @@ a {
     padding: 15px 40px;  
     border: none;
     background: transparent;
+    z-index: 5;
 }
 
 .button-strip::before {
@@ -102,7 +103,7 @@ a {
 .header-logo {
     position: absolute;
     top: 23px;
-    left: 60px;
+    left: 50px;
 }
 
 .header-wrapper {
@@ -156,6 +157,7 @@ a {
     line-height: 36px;
     letter-spacing: 0.01em;
     margin-left: 20px;
+    position: relative;
 }
 
 .search-field::placeholder {
@@ -259,8 +261,9 @@ a {
 
 .slider {
     margin: 0 auto;
-    width: 1070px;
-    padding: 0 45px;
+    width: 1160px;
+    position: relative;
+    top: -110px;
 }
 
 .slider-list {
@@ -270,28 +273,32 @@ a {
 
 .slider-item {
     list-style-type: none;
+    position: relative;
 }
 
 .product {
     display: flex;
-    width: 1070px;
-    height: 490px;
-    justify-content: space-around;
+    width: 1160px;
+    justify-content: flex-end;
     position: relative;
+}
+
+.product-content {
+    width: 500px;
+    position: relative;
+    margin-left: 120px;
+    margin-right: 60px;
 }
 
 .product-counter {
     font-family: "Gilroy ExtraBold", "Arial";
     font-size: 179px;
+    line-height: 179px;
     color: white;
     letter-spacing: 0.01em;
     position: absolute;
-    top: 0;
+    top: 60;
     right: 0;
-}
-
-.product-content {
-    width: 500px;
 }
 
 .title {
@@ -300,6 +307,19 @@ a {
     color: black;
     letter-spacing: 0.01em;
     line-height: normal;
+}
+
+.slider .title {
+    margin-top: 76px;
+    margin-bottom: 20px;
+}
+
+.product-text {
+    margin-bottom: 35px;
+}
+
+.props {
+    margin-top: 50px; 
 }
 
 .props-value {
@@ -324,28 +344,32 @@ a {
 .slide-btn-list {
     display: flex;
     justify-content: space-between;
-    width: 100px;
+    width: 77px;
     list-style-type: none;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 312px;
+    right: 80px;
 }
 
 .slide-btn {
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    border: 1px solid black;
-    background-color: transparent;
     position: relative;
+    border: none;
+    background: transparent;
 }
 
 .slide-btn::before {
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    border: 1px solid black;
-    background-color: transparent;
+    content: '';
+    width: 12px;
+    height: 12px;
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: 0;
+    left: 0;
+    background-image: url("../img/slider-button-empty.svg");
+    background-size: 12px 12px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }
 
 .popular-goods-wrapper {
@@ -396,10 +420,22 @@ a {
     left: 0;
 }
 
+.services-wraper {   
+    position: relative;
+    width: 100%;
+    height: 290px;
+    background-color: #e5e5e5;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    margin-top: 180px;
+}
+
 .services {
     display: flex;
     width: 1160px;
-    margin: 0 auto;
+    position: absolute;
+    top: -100px;
 }
 
 .services-list {
@@ -410,6 +446,10 @@ a {
     padding: 0;
 }
 
+.services-item:first-child {
+    padding-top: 80px;
+}
+
 .services-button-strip {
     position: relative;
     font-family: "Gilroy ExtraBold", "Arial";
@@ -417,8 +457,11 @@ a {
     letter-spacing: 0.2em;
     line-height: normal;
     text-transform: uppercase;
-    display: inline-block; 
-    padding: 15px 40px;  
+    width: 160px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
     border: none;
     background: transparent;
 }
@@ -426,12 +469,12 @@ a {
 .services-button-strip::before {
     content: '';
     position: absolute;
-    top: 23px;
+    top: 16px;
     left: 0;
     background-color: #f0c52e;
     display: inline-block;
     width: 100%;
-    height: 15%;
+    height: 8px;
     z-index: -1;
 }
 
@@ -445,13 +488,70 @@ a {
     width: auto;
 }
 
+.guarantee-btn:focus guarantee {
+    display: block; 
+}
+
+.credit-btn:focus credit {
+    display: block; 
+}
+
 .slides {
     width: 766px;
-    padding: 80px 0 80px 117px;
+    padding: 66px 0 80px 117px;
+}
+
+.services-slide {
+    position: relative;
+}
+
+.services-slide:not(:first-child) {
+    display: none;
 }
 
 .services-slide .title {
     margin: 0;
+}
+
+.services-slide-text {
+    width: 437px;
+}
+
+
+.delivery::before {
+    content: '';
+    width: 166px;
+    height: 168px;
+    position: absolute;
+    top: 19px;
+    right: 67px;
+    background-image: url("../img/delivery.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.guarantee::before {
+    content: '';
+    width: 166px;
+    height: 190px;
+    position: absolute;
+    top: 0;
+    right: 67px;
+    background-image: url("../img/warranty.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.credit::before {
+    content: '';
+    width: 166px;
+    height: 180px;
+    position: absolute;
+    top: 0;
+    right: 67px;
+    background-image: url("../img/credit.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }
 
 .brands-wrapper {
@@ -674,6 +774,7 @@ a {
     background-color: #efefef;
     width: 330px;
     padding: 70px 70px 0 60px;
+    z-index: -1;
 }
 
 .filter-form .set-form {
@@ -722,7 +823,41 @@ a {
 }
 
 .sorting-option {
+    font-family: "OpenSans Regular", "Arial";
+    font-size: 14px;
+    opacity: 0.3;
     margin-right: 20px;
+}
+
+.sorting-option:hover {
+    opacity: 0.6;
+}
+
+.sorting-option:active {
+    opacity: 1;
+}
+
+.up {
+    border: 5px solid transparent;
+    border-bottom: 10px solid black;
+    opacity: 0.2;
+}
+
+.down {
+    border: 5px solid transparent;	
+    border-top: 10px solid black;
+    opacity: 0.2;
+    margin-left: 20px;
+}
+
+.catalog .up:hover, 
+.catalog .down:hover {
+    opacity: 0.4;
+}
+
+.catalog .up:active, 
+.catalog .down:active {
+    opacity: 1;
 }
 
 .filter-products-wrapper {
@@ -751,10 +886,11 @@ a {
 }
 
 .catalog {
-    width: 740px;
+    width: 760px;
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
     align-content: space-between;
@@ -762,6 +898,7 @@ a {
 
 .catalog-item {
     position: relative;
+    margin-bottom: 30px;
 }
 
 .goods-description {
@@ -773,41 +910,6 @@ a {
     font-family: "Gilroy ExtraBold", "Arial";
     font-size: 18px;
     letter-spacing: 0.01em;
-}
-
-.catalog .sorting-option {
-    font-family: "OpenSans Regular", "Arial";
-    font-size: 14px;
-    opacity: 0.3;
-}
-
-.catalog .sorting-option:hover {
-    opacity: 0.6;
-}
-
-.catalog .sorting-option:active {
-    opacity: 1;
-}
-
-.up {
-    border: 5px solid transparent;	
-    border-bottom: 10px solid rgba(0, 0, 0, 0.2);
-}
-
-.down {
-    border: 5px solid transparent;	
-    border-top: 10px solid rgba(0, 0, 0, 0.2);
-    margin-left: 20px;
-}
-
-.catalog .up:hover, 
-.catalog .down:hover {
-    border-top: 10px solid rgba(0, 0, 0, 0.4);
-}
-
-.catalog .up:active, 
-.catalog .down:active {
-    opacity: 1;
 }
 
 .catalog .price {
@@ -829,6 +931,11 @@ a {
     position: absolute;
     top: 0;
     left: 0;
+    display: none;
+}
+
+.catalog-item:hover .background-for-buttons{
+    display: flex;
 }
 
 .catalog .comparison {
@@ -848,13 +955,8 @@ a {
     color: rgba(0, 0, 0, 0.2);
 }
 
-.new {
-    font-family: "Gilroy ExtraBold", "Arial";
-    font-size: 14px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    text-align: center;
-    color: rgba(0, 0, 0, 0.2);
+
+.new-border{
     width: 60px;
     height: 60px;
     border-radius: 32px;
@@ -863,6 +965,18 @@ a {
     position: absolute;
     top: 30px;
     right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new {
+    font-family: "Gilroy ExtraBold", "Arial";
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.2);
 }
 
 .page-navigation {
@@ -883,10 +997,8 @@ a {
     text-transform: uppercase;
     border: none;
     background: transparent;
-}
-
-.page-navigation .back-forward {
     text-align: center;
+    padding: 0 29px;
 }
 
 .page-navigation .back-forward:active {
@@ -903,9 +1015,14 @@ a {
 .catalog-pages {
     list-style-type: none;
     display: flex;
+    width: 87px;
+    justify-content: space-between;
 }
 
 .page-navigation .page-number {
+    font-family: "Gilroy ExtraBold", "Arial";
+    font-size: 16px;
+    letter-spacing: 0.2em;
     opacity: 0.3;
     border: none;
     background: transparent;
@@ -926,7 +1043,7 @@ a {
     color: white;
     background-color: #464646;
     padding-top: 65px;
-    height: 260px;
+    padding-bottom: 56px;
 }
 
 .footer-wrapper {
@@ -942,7 +1059,7 @@ a {
 .footer .footer-logo {
     font-family: "Gilroy ExtraBold", "Arial";
     font-size: 48px;
-    line-height: normal;
+    line-height: 48px;
     letter-spacing: 0.01em;
     color: #ffc600;
     text-transform: uppercase;
@@ -954,6 +1071,20 @@ a {
 
 .footer .footer-logo:active {
     color: rgba(255, 198, 0, 0.3);
+}
+
+.footer-left {
+    position: relative;
+}
+
+.footer-left::after {
+    content: '';
+    position: absolute;
+    bottom: 22px;
+    left: 0;
+    width: 80px;
+    height: 7px;
+    background-color: #ffc600;
 }
 
 .footer-contacts-item {
@@ -968,9 +1099,9 @@ a {
 .footer-center {
     display: flex;
     flex-direction: column;
-    margin-left: auto;
+    margin-left: 200px;
     align-items: center;
-    margin-top: 75px;
+    margin-top: 65px;
 }
 
 .footer-contacts-list {
@@ -986,6 +1117,8 @@ a {
     justify-content: space-between;
     list-style-type: none;
     width: 143px;
+    padding: 0;
+    margin: 65px 0 0 0;
 }
 
 .social-icon {
@@ -1001,7 +1134,7 @@ a {
 }
 
 .footer-right {
-    margin-left: 30px;
+    margin-left: 3px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -1012,7 +1145,9 @@ a {
     display: flex;
     justify-content: flex-end;
     margin: 0;
+    margin-bottom: 21px;
     list-style-type: none;
+    padding: 0;
 }
 
 .footer-contacts-item a {
@@ -1032,24 +1167,30 @@ a {
     opacity: 0.7;
 }
 
-.footer-login-name:hover {
+.footer-login-item:hover .footer-login-name {
     opacity: 1;
 }
 
-.footer-login-name:active {
+.footer-login-item:active .footer-login-name {
+    opacity: 0.3;
+}
+
+.footer-login-item:hover .footer-login-pic {
+    opacity: 0.6;
+}
+
+.footer-login-item:active .footer-login-pic {
     opacity: 0.3;
 }
 
 .htmlacademy {
-    margin-top: 50px;
+    margin-top: 48px;
 }
 
-.htmlacademy:hover,
-.footer-login-pic:hover {
+.htmlacademy:hover {
     opacity: 0.6;
 }
 
-.htmlacademy:active,
-.footer-login-pic:active {
+.htmlacademy:active {
     opacity: 0.3;
 }

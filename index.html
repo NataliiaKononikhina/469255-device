@@ -86,13 +86,13 @@
             <section class="slider">
                 <h2 class="visually-hidden">Товары</h2>
                 <ul class="slider-list">
-                    <li class="slider-item">
+                    <li class="slider-item slider-item-1">
                         <section class="product">
                             <img src="img/slider-1.png" width="384" height="486" alt="Селфи-палка" class="product-pic">
-                            <div class="product-counter">01</div>
                             <div class="product-content">
-                                <h3 class="title">Делайте селфи, как Бен Стиллер!</h3>
-                                <p>Самая длинная палка для селфи доступна в нашем магазине.
+                                <div class="product-counter">01</div>
+                                <h3 class="title">Делайте селфи,<br> как Бен Стиллер!</h3>
+                                <p class="product-text">Самая длинная палка для селфи доступна в нашем магазине.
                                     Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
                                 </p>                               
                                  <a href="#" class="button-strip">Подробнее</a>
@@ -111,13 +111,13 @@
                             </div>
                         </section>
                     </li>
-                    <li class="slider-item">
+                    <li class="slider-item  slider-item-2">
                         <section class="product">
                             <img src="img/slider-2.png" width="345" height="485" alt="Фитнес-браслеты" class="product-pic">
-                            <div class="product-counter">02</div>
                             <div class="product-content">
+                                <div class="product-counter">02</div>
                                 <h3 class="title">Худеем правильно!</h3>
-                                <p>Мотивирующие фитнес-браслеты помогут найти в себе силы 
+                                <p class="product-text">Мотивирующие фитнес-браслеты помогут найти в себе силы 
                                     не пропускать занятия и соблюдать диету.
                                 </p>
                                 <a href="#" class="button-strip">Подробнее</a>
@@ -132,13 +132,13 @@
                             </div>
                         </section>
                     </li>
-                    <li class="slider-item">
+                    <li class="slider-item slider-item-3">
                         <section class="product">
                             <img src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер" class="product-pic">
-                            <div class="product-counter">03</div>
                             <div class="product-content">
+                                <div class="product-counter">03</div>
                                 <h3 class="title">Порхает как бабочка, жалит как пчела!</h3>
-                                <p>Этот обычный, на первый взгляд, квадрокоптер оснащен 
+                                <p class="product-text">Этот обычный, на первый взгляд, квадрокоптер оснащен 
                                     мощным лазером, замаскированным под стандартную камеру.
                                 </p>
                                 <a href="#" class="button-strip">Подробнее</a>
@@ -312,38 +312,40 @@
                 </ul>
             </section>
 
-            <section class="services">
-                <h2 class="visually-hidden">Информация дополнительная</h2>
-                <ul class="services-list">
-                    <li class="services-item"><a href="#" class="services-button-strip">Доставка</a></li>
-                    <li class="services-item"><a href="#" class="services-button-strip">Гарантия</a></li>
-                    <li class="services-item"><a href="#" class="services-button-strip">Кредит</a></li>
-                </ul>
-                <div class="slides">
-                    <section class="services-slide">
-                        <h3 class="title">Доставка</h3>
-                        <p>
-                            Мы с удовольствием доставим ваш товар прямо к вашему 
-                            подъезду совершенно бесплатно! Ведь мы неплохо
-                            заработаем, поднимая его на ваш этаж.
-                        </p>
-                    </section>
-                    <section class="services-slide">
-                        <h3 class="title">Гарантия</h3>
-                        <p>
-                            Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
-                            Товар, не дом, конечно же.
-                        </p>
-                    </section>
-                    <section class="services-slide">
-                        <h3 class="title">Кредит</h3>
-                        <p>
-                            Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные 
-                            условия кредита. Выгодные для нашего банка, разумеется.
-                        </p>
-                    </section> 
-                </div>               
-            </section>
+            <div class="services-wraper">
+                <section class="services">
+                    <h2 class="visually-hidden">Информация дополнительная</h2>
+                    <ul class="services-list">
+                        <li class="services-item"><a href="#" class="services-button-strip delivery-btn">Доставка</a></li>
+                        <li class="services-item"><a href="#" class="services-button-strip guarantee-btn">Гарантия</a></li>
+                        <li class="services-item"><a href="#" class="services-button-strip credit-btn">Кредит</a></li>
+                    </ul>
+                    <div class="slides">
+                        <section class="services-slide delivery">
+                            <h3 class="title">Доставка</h3>
+                            <p class="services-slide-text">
+                                Мы с удовольствием доставим ваш товар прямо к вашему 
+                                подъезду совершенно бесплатно! Ведь мы неплохо
+                                заработаем, поднимая его на ваш этаж.
+                            </p>
+                        </section>
+                        <section class="services-slide guarantee">
+                            <h3 class="title">Гарантия</h3>
+                            <p class="services-slide-text">
+                                Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
+                                Товар, не дом, конечно же.
+                            </p>
+                        </section>
+                        <section class="services-slide credit">
+                            <h3 class="title">Кредит</h3>
+                            <p class="services-slide-text">
+                                Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные 
+                                условия кредита. Выгодные для нашего банка, разумеется.
+                            </p>
+                        </section> 
+                    </div>               
+                </section>
+            </div>                        
 
             <section class="brands-wrapper">
                 <h2 class="visually-hidden">Бренды</h2>
