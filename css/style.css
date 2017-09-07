@@ -67,6 +67,7 @@ a {
     border: none;
     background: transparent;
     z-index: 5;
+    cursor:pointer;
 }
 
 .button-strip::before {
@@ -183,6 +184,7 @@ a {
 
 .search-button {
     visibility: hidden;
+    cursor:pointer;
 }
 
 .search-field:focus + .search-button {
@@ -215,6 +217,7 @@ a {
 
 .header-caption {
     position: relative;
+    cursor:pointer;
 }
 
 .header-caption::before {
@@ -229,43 +232,38 @@ a {
     opacity: 0.3;
 }
 
-.products-list {
+.products-list-wrapper {
     display: none;
-    list-style-type: none;
 }
 
-.header-products:hover .products-list,
-.products-list:hover,
-.products-list:active {
-    display: flex;
-    flex-wrap: wrap;
+.header-products:hover .products-list-wrapper,
+.products-list-wrapper:hover,
+.products-list-wrapper:active {
     width: 1060px;
     padding: 12px 50px 38px 50px;
     background-color: #f7e296;
     position: absolute;
     left: -50px;
     z-index: 100;
+    display: block;
+}
+
+.products-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 700px;
     margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 .product-item {
-    padding-right: 59px;
-}
-
-.product-item:nth-last-child(4) {
-    padding-right: 480px;
-}
-
-.product-item:nth-last-child(3) {
-    padding-right: 113px;
-}
-
-.product-item:nth-last-child(2) {
-    padding-right: 600px;
+    flex-basis: 33.33333%;
 }
 
 .product-item:last-child {
-    padding-right: 900px;
+     flex-basis: 100%;
 }
 
 .navigation {
@@ -758,7 +756,7 @@ a {
 
 .brands-wrapper {
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 108px;
 }
 
 .brands {
@@ -795,29 +793,63 @@ a {
 }
 
 .about-us {
-    width: 460px;
+    width: 500px;
 }
 
-.about-us .title,
-.section-contacts .title {
-    margin-bottom: 35px;
+.about-us .title::before,
+.section-contacts .title::before {
+    content: '';
+    position: absolute;
+    top: -45px;
+    left: 0;
+    width: 80px;
+    height: 7px;
+    background-color: black;
 }
 
-.about-us-text,
+
+
+.about-us-text {
+    margin-bottom: 30px; 
+}
+
 .section-contacts-text {
     margin-bottom: 40px; 
 }
 
 .about-us-list {
-    margin: 60px 0 50px 0;
+    margin: 60px 0 45px 0;
+    padding: 0;
+}
+
+.about-us-item {
+    position: relative;
+    list-style: none;
+    padding-left: 35px;
+    font-family: "Gilroy ExtraBold", "Arial";
+    font-size: 14px;
+    line-height: 43px;
+    color: black;
+}
+
+.about-us-item::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    border: 2px solid #e5e5e5;
+    position: absolute;
+    top: 15px;
+    left: 2px;
 }
 
 .section-contacts {
     width: 560px;
 }
 
-.map-screenshot {
-    margin-bottom: 84px;
+.map-link {
+    display: block;
+    margin-bottom: 52px;
 }
 
 .map {
@@ -1001,8 +1033,8 @@ a {
 
 .filter {
     background-color: #dcdcdc;
-    font-family: "Gilroy Light", "Arial";
-    font-size: 14px;
+    font-family: "Gilroy ExtraBold", "Arial";
+    font-size: 18px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: black;
@@ -1014,7 +1046,7 @@ a {
 
 .filter-form {
     background-color: #efefef;
-    width: 330px;
+    width: 200px;
     padding: 70px 70px 0 60px;
 }
 
@@ -1055,10 +1087,9 @@ a {
     font-family: "Gilroy Light", "Arial";
     font-size: 14px;
     color: rgba(0, 0, 0, 0.2);
-}
-
-.range-right {
-    
+    width: 70px;
+    position: absolute;
+    top: 23px;
 }
 
 .filter-button-left {
@@ -1073,6 +1104,7 @@ a {
     width: 24px;
     height: 28px;
     padding: 0;
+    cursor: pointer;
 }
 
 .filter-button::before {
@@ -1218,6 +1250,7 @@ a {
 .checkbox-wrapper,
 .radio-wrapper {
     position: relative;
+    cursor: pointer;
 }
 
 .checkbox {
@@ -1260,6 +1293,7 @@ a {
 
 .option {
     margin-left: 40px;
+    cursor: pointer;
 }
 
 .catalog {
@@ -1322,6 +1356,7 @@ a {
     color: rgba(0, 0, 0, 0.5);
     border: none;
     background: transparent;
+    cursor:pointer;
 }
 
 .catalog .comparison:hover {
@@ -1376,6 +1411,7 @@ a {
     background: transparent;
     text-align: center;
     padding: 0 29px;
+    cursor:pointer;
 }
 
 .page-navigation .back-forward:active {
@@ -1403,6 +1439,7 @@ a {
     opacity: 0.3;
     border: none;
     background: transparent;
+    cursor:pointer;
 }
 
 .page-navigation .page-number:hover {
