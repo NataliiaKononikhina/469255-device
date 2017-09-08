@@ -161,8 +161,11 @@ a {
     font-size: 15px;
     line-height: 36px;
     letter-spacing: 0.01em;
-    margin-left: 40px;
+    width: 280px;
+    padding-left: 40px;
+    padding-right: 40px;
     position: relative;
+    margin: 0;
 }
 
 .search-field::placeholder {
@@ -179,17 +182,20 @@ a {
 }
 
 .search-field:focus {
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid black;
 }
 
 .search-button {
     visibility: hidden;
     cursor:pointer;
+    margin: 0;
+    position: relative;
+    left: -5px;
 }
 
 .search-field:focus + .search-button {
     background: none;
-    border: 1px solid black;
+    border: 2px solid black;
     line-height: 36px;
     padding: 0 15px;
     visibility: visible;
@@ -197,14 +203,14 @@ a {
 
 .search-field:focus + .search-button:hover {
     background: black;
-    border: 1px solid black;
+    border: 2px solid black;
     color: white;
     visibility: visible;
 }
 
 .search-button:active {
     background: black;
-    border: 1px solid black;
+    border: 2px solid black;
     color: rgba(255, 255, 255, 0.3);
     visibility: visible;
     line-height: 36px;
