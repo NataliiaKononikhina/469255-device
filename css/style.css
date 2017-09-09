@@ -60,25 +60,26 @@ a {
     font-family: "Gilroy ExtraBold", "Arial";
     font-size: 18px;
     letter-spacing: 0.2em;
-    line-height: normal;
+    line-height: 40px;
     text-transform: uppercase;
     display: inline-block; 
-    padding: 15px 40px;  
+    text-align: center;  
     border: none;
     background: transparent;
     z-index: 5;
     cursor:pointer;
+    width: 220px;
 }
 
 .button-strip::before {
     content: '';
     position: absolute;
-    top: 23px;
+    top: 16px;
     left: 0;
     background-color: #f0c52e;
     display: inline-block;
     width: 100%;
-    height: 15%;
+    height: 8px;
     z-index: -1;
 }
 
@@ -95,12 +96,12 @@ a {
 
 .header {
     line-height: 36px;
-    margin: 0 auto;
+    margin: 0 140px;
     margin-top: 40px;
-    width: 1060px;
+    width: 1059px;
     position: relative;
     display: flex;
-    padding: 40px 40px 40px 60px;
+    padding: 40px 43px 40px 58px;
     justify-content: space-between;
     background-color: #f7e296;
 }
@@ -141,7 +142,7 @@ a {
 }
 
 .header-search {
-    margin: 0 0 29px 0;
+    margin: 0 0 28px 0;
 }
 
 .header-search::before {
@@ -152,6 +153,7 @@ a {
     width: 17px;
     height: 38px;
     position: absolute;
+    left: 62px;
 }
 
 .search-field {
@@ -162,7 +164,7 @@ a {
     line-height: 36px;
     letter-spacing: 0.01em;
     width: 280px;
-    padding-left: 40px;
+    padding-left: 39px;
     padding-right: 40px;
     position: relative;
     margin: 0;
@@ -230,7 +232,7 @@ a {
     content: '';
     position: absolute;
     top: 3px;
-    right: -30px;
+    right: -28px;
     width: 16px;
     height: 16px;
     background-image: url("../img/plus.svg");
@@ -290,14 +292,25 @@ a {
     list-style-type: none;
 }
 
-.login-item,
-.delivery-contacts {
-    margin: 0 20px;
+.login-item {
+    margin: 0 23px;
 }
 
+.login-item:not(:first-child) {
+    margin: 0 19px;
+}
+
+.delivery-contacts {
+    margin: 0 15px 0 21px;
+}
+    
 .login-item {
-    padding-left: 20px;
+    padding-left: 19px;
     position: relative;
+}
+
+.login-item:not(:first-child) {
+    padding-left: 17px;
 }
 
 .login-list .compare,
@@ -349,7 +362,7 @@ a {
     list-style-type: none;
 }
 
-.exit {
+.login-list .exit {
     margin: 0;
     padding: 0;
     opacity: 0.3;
@@ -360,7 +373,7 @@ a {
 
 .section {
     width: 1160px;
-    margin: 0 auto;
+    margin: 0 140px;
 }
 
 .slider {
@@ -396,7 +409,7 @@ a {
 }
 
 .product-content {
-    width: 509px;
+    width: 511px;
     margin-right: 50px;
     position: relative
 }
@@ -404,7 +417,7 @@ a {
 .product-content::before {
     content: '';
     position: absolute;
-    top: 38px;
+    top: 36px;
     left: 0;
     width: 100px;
     height: 7px;
@@ -420,7 +433,7 @@ a {
     letter-spacing: 0.01em;
     position: absolute;
     top: -14px;
-    right: 0;
+    right: -3px;
 }
 
 .title {
@@ -433,17 +446,17 @@ a {
 }
 
 .slider .title {
-    margin-top: 76px;
-    margin-bottom: 20px;
+    margin-top: 77px;
+    margin-bottom: 18px;
 }
 
 .product-text {
-    margin-bottom: 35px;
+    margin-bottom: 42px;
     width: 480px;
 }
 
 .props {
-    margin-top: 50px; 
+    margin-top: 56px; 
 }
 
 .props-value {
@@ -455,14 +468,14 @@ a {
 
 .props-description {
     font-size: 13px;
-    line-height: 20px;
+    line-height: 13px;
     margin: 0;
     color: black;
 }
 
 .props-value:not(:last-child),
 .props-description:not(:last-child) { 
-    padding-right: 80px;
+    padding-right: 76px;
 }
 
 .slide-btn-list {
@@ -574,9 +587,9 @@ a {
 .popular-2::before {
     content: '';
     position: absolute;
-    bottom: 0; 
+    bottom: 1px;
     left: 50%;
-    margin-left: -43px;
+    margin-left: -42px;
     width: 86px;
     height: 117px;
     background-image: url("../img/popular-2.svg");
@@ -587,9 +600,9 @@ a {
     content: '';
     position: absolute;
     top: 50%;
-    margin-top: -43px; 
+    margin-top: -42px;
     left: 50%;
-    margin-left: -35px;
+    margin-left: -31px;
     width: 71px;
     height: 87px;
     background-image: url("../img/popular-3.svg");
@@ -600,7 +613,7 @@ a {
     content: '';
     position: absolute;
     top: 50%;
-    margin-top: -32px; 
+    margin-top: -29px; 
     left: 50%;
     margin-left: -53px;
     width: 107px;
@@ -613,9 +626,9 @@ a {
     content: '';
     position: absolute;
     top: 50%;
-    margin-top: -49px; 
+    margin-top: -47px;
     left: 50%;
-    margin-left: -28px;
+    margin-left: -26px;
     width: 56px;
     height: 98px;
     background-image: url("../img/popular-5.svg");
@@ -626,9 +639,9 @@ a {
     content: '';
     position: absolute;
     top: 50%;
-    margin-top: -34px; 
+    margin-top: -30px;
     left: 50%;
-    margin-left: -66px;
+    margin-left: -67px;
     width: 132px;
     height: 69px;
     background-image: url("../img/popular-6.svg");
@@ -638,7 +651,7 @@ a {
 .popular-good-name {
     font-family: "Gilroy ExtraBold", "Arial";
     font-size: 18px;
-    line-height: normal;
+    line-height: 22px;
     position: absolute;
     top: 195px;
     left: 0;
@@ -646,10 +659,11 @@ a {
 
 .services-wraper {   
     position: relative;
-    width: 100%;
+    width: 1440px;
     min-height: 290px;
     background-color: #e5e5e5;
-    margin-top: 172px;
+    margin: 0 auto;
+    margin-top: 178px;
 }
 
 .services {
@@ -662,7 +676,7 @@ a {
 .services-list {
     list-style-type: none;
     border-right: 7px solid black;
-    width: 308px;
+    width: 306px;
     margin: 0;
     padding: 0;
 }
@@ -672,7 +686,7 @@ a {
 }
 
 .services-item {
-    margin-bottom: 23px;
+    margin-bottom: 25px;
 }
 
 .services-button-strip {
@@ -738,7 +752,7 @@ a {
 
 .slides {
     width: 838px;
-    padding: 66px 0 58px 117px;
+    padding: 68px 0 58px 117px;
 }
 
 .services-slide {
@@ -755,7 +769,7 @@ a {
 
 .services-slide-text {
     width: 437px;
-    margin-top: 32px;
+    margin-top: 27px;
 }
 
 
@@ -796,8 +810,8 @@ a {
 }
 
 .brands-wrapper {
-    margin-top: 76px;
-    margin-bottom: 105px;
+    margin-top: 78px;
+    margin-bottom: 106px;
 }
 
 .brands {
@@ -807,6 +821,11 @@ a {
     margin: 0;
     padding: 0;
     align-items: center;
+    padding-left: 26px;
+}
+
+.brands-item:nth-child(2n) {
+    margin-left: 30px;
 }
 
 .logo-black-white {
@@ -828,9 +847,7 @@ a {
 .about-cotacts-wrapper {
     display: flex;
     justify-content: space-between;
-    width: 1160px;
-    margin: 0 auto;
-    margin-bottom: 75px;
+    margin-bottom: 81px;
 }
 
 .about-us {
@@ -857,7 +874,7 @@ a {
 }
 
 .about-us-list {
-    margin: 64px 0 45px 0;
+    margin: 64px 0 54px 0;
     padding: 0;
 }
 
@@ -867,7 +884,7 @@ a {
     padding-left: 35px;
     font-family: "Gilroy ExtraBold", "Arial";
     font-size: 16px;
-    line-height: 43px;
+    line-height: 41px;
     color: black;
 }
 
@@ -882,13 +899,21 @@ a {
     left: 2px;
 }
 
+.button-about-us {
+    width: 260px;
+}
+
 .section-contacts {
     width: 560px;
 }
 
 .map-link {
     display: block;
-    margin-bottom: 52px;
+    margin-bottom: 60px;
+}
+
+.button-contacts {
+    width: 260px;
 }
 
 .map {
@@ -1006,10 +1031,11 @@ a {
 /* ========inner.html=========*/
 
 .main-title {
-    margin: 0 auto;
+    margin: 0 140px;
     width: 1100px;
     padding-left: 60px;
     margin-bottom: 40px;
+    margin-top: 28px;
 }
 
 .main-title .title {
@@ -1054,16 +1080,8 @@ a {
 
 .wrapper-filter-sorting {
     display: flex;
-}
-
-.wrapper-filter-sorting .left {
-    flex: 1;
-    background-color: #dcdcdc;
-}
-
-.wrapper-filter-sorting .right {
-    flex: 1;
-    background-color: #ebebeb;
+    width: 1440px;
+    margin: 0 auto;
 }
 
 .section-filter-sorting {
@@ -1079,19 +1097,24 @@ a {
     color: black;
     width: 210px;
     margin: 0;
-    padding: 20px 60px;
+    padding: 19px 56px 20px 202px;
 }
 
 .filter-form {
     background-color: #efefef;
     width: 203px;
-    padding: 70px 70px 0 57px;
+    padding: 68px 67px 0 198px;
 }
 
 .filter-form .set-form {
     border: none;
     border-top: 2px solid black;
-    padding: 10px 0 35px;
+    padding: 10px 0 30px;
+}
+
+.set-form:nth-child(1) {
+    padding-bottom: 38px;
+    padding-top: 7px;
 }
 
 .filter-form .filter-name {
@@ -1188,6 +1211,7 @@ a {
     display: flex;
     align-items: center;
     width: 832px;
+    padding-right: 140px;
 }
 
 .sorting {
@@ -1196,7 +1220,7 @@ a {
     text-transform: uppercase;
     color: black;
     letter-spacing: 0.2em;
-    padding: 0 55px 0 70px;
+    padding: 0 55px 0 72px;
 }
 
 .sorting-menu {
@@ -1211,7 +1235,7 @@ a {
     font-family: "OpenSans Regular", "Arial";
     font-size: 14px;
     opacity: 0.3;
-    margin-right: 28px;
+    margin-right: 30px;
 }
 
 .sorting-option:hover {
@@ -1225,6 +1249,7 @@ a {
 .up-down {
     position: relative;
     width: 61px;
+    height: 15px;
 }
 
 .up::before {
@@ -1263,27 +1288,15 @@ a {
 
 .filter-products-wrapper {
     display: flex;
-}
-
-.section-left {
-    flex: 1;
-    background-color: #efefef;
-}
-
-.section-right {
-    flex: 1;
-}
-
-.filter-catalog {
-    display: flex;
-    width: 1160px; 
+    width: 1440px;
+    margin: 0 auto;
 }
 
 .goods-catalog {
     width: 760px;
     display: flex;
     flex-direction: column;
-    padding: 70px 0 75px 70px;
+    padding: 68px 0 72px 72px;
 }
 
 .option {
@@ -1359,6 +1372,10 @@ a {
 
 .option input[type="radio"]:checked:hover + .radio-indicator::after {
     opacity: 0.6;
+}
+
+.button-form {
+    width: 200px;
 }
 
 .catalog {
@@ -1468,6 +1485,8 @@ a {
     display: flex;
     justify-content: space-between;
     width: 760px;
+    position: relative;
+    top: -7px;
 }
 
 .page-navigation .back-forward {
@@ -1498,7 +1517,8 @@ a {
     display: flex;
     width: 100px;
     justify-content: space-between;
-    padding: 0;
+    padding: 0 0 0 10px;
+    margin: 19px 0;
 }
 
 .page-navigation .page-number {
@@ -1525,12 +1545,15 @@ a {
 .footer {
     color: white;
     background-color: #464646;
-    padding-top: 59px;
+    padding-top: 57px;
     padding-bottom: 60px;
+    width: 1440px;
+    margin: 0 auto;
 }
 
 .footer-wrapper {
     display: flex;
+    justify-content: space-between;
 }
 
 .footer a {
@@ -1564,7 +1587,7 @@ a {
 .footer-left::after {
     content: '';
     position: absolute;
-    bottom: 25px;
+    bottom: 20px;
     left: 0;
     width: 80px;
     height: 7px;
@@ -1584,8 +1607,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 68px;
-    width: 440px;
+    margin-top: 72px;
 }
 
 .footer-contacts-list {
@@ -1593,7 +1615,7 @@ a {
     justify-content: space-between;
     margin: 0;
     padding: 0;
-    width: 440px;
+    width: 427px;
 }
 
 .footer-social {
@@ -1655,7 +1677,7 @@ a {
     text-align: right;
     position: relative;
     width: 380px;
-    padding-top: 4px;
+    padding-top: 6px;
 }
 
 .footer-login-list {
@@ -1673,11 +1695,12 @@ a {
 
 .footer-login-item {
     list-style-type: none;
-    margin-left: 50px;
+    margin-left: 41px;
 }
 
 .footer-login-pic {
     fill: #ffc600;
+    margin-right: 10px;
 }
 
 .footer-login-name {
