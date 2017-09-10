@@ -280,10 +280,6 @@ a {
     min-height: 220px;
 }
 
-.hidden {
-    display: none;
-}
-
 .inner-navigation {
     min-height: 110px;
 }
@@ -1080,15 +1076,16 @@ a {
     position: relative;
 }
 
-.crumb{
+.crumbs,
+.crumb {
     opacity: 0.3;
 }
 
-.crumb:hover {
+.crumbs:hover {
     opacity: 0.6;
 }
 
-.crumb:active {
+.crumbs:active {
     opacity: 0.1;
 }
 
@@ -1577,6 +1574,10 @@ a {
     opacity: 1;
 }
 
+.hidden {
+    display: none;
+}
+
 
 /* ========FOOTER=========*/
 
@@ -1658,9 +1659,9 @@ a {
 
 .footer-social {
     display: flex;
-    justify-content: space-between;
+   justify-content: space-around;
     list-style-type: none;
-    width: 143px;
+    width: 169px;
     padding: 0;
     margin: 60px 0 0 0;
     position: relative;
@@ -1668,9 +1669,7 @@ a {
 
 .fb::before {
     content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+    display: inline-block;
     width: 32px;
     height: 32px;
     background-image: url("../img/fb.svg");
@@ -1679,9 +1678,7 @@ a {
 
 .vk::before {
     content: '';
-    position: absolute;
-    top: 0;
-    left: 55px;
+    display: inline-block;
     width: 32px;
     height: 32px;
     background-image: url("../img/vk.svg");
@@ -1690,9 +1687,7 @@ a {
 
 .twitter::before {
     content: '';
-    position: absolute;
-    top: 0;
-    left: 110px;
+    display: inline-block;
     width: 32px;
     height: 32px;
     background-image: url("../img/twitter.svg");
@@ -1733,7 +1728,8 @@ a {
 
 .footer-login-item {
     list-style-type: none;
-    margin-left: 41px;
+    margin-left: 65px;
+    position: relative;
 }
 
 .footer-login-pic {
@@ -1753,16 +1749,53 @@ a {
     opacity: 0.3;
 }
 
-.footer-login-item:hover .footer-login-pic {
+.footer-user::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: -20px;
+    width: 14px;
+    height: 12px;
+    background-image: url("../img/user_yellow.svg");
+    background-repeat: no-repeat;
+}
+
+.footer-compare::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: -20px;
+    width: 14px;
+    height: 12px;
+    background-image: url("../img/compare_yellow.svg");
+    background-repeat: no-repeat;
+}
+
+.footer-cart::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: -22px;
+    width: 14px;
+    height: 12px;
+    background-image: url("../img/cart_yellow.svg");
+    background-repeat: no-repeat;
+}
+
+.footer-login-item:hover .footer-login-item::before {
     opacity: 0.6;
 }
 
-.footer-login-item:active .footer-login-pic {
+.footer-login-item:active .footer-login-item::before {
     opacity: 0.3;
 }
 
+.phone {
+    display: block;
+}
+
 .htmlacademy {
-    margin-top: 46px;
+    margin-top: 61px;
     display: inline-block;
 }
 
