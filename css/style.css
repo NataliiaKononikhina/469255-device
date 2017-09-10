@@ -556,7 +556,7 @@ a {
     position: relative;
 }
 
-.popular-background {
+.popular-pic {
     width: 160px;
     height: 160px;
     background-color: #f7e296;
@@ -566,12 +566,13 @@ a {
     position: relative;
 }
 
-.popular-good-link:hover .popular-background,
-.popular-good-link:active .popular-background {
+.popular-good-link:hover .popular-pic,
+.popular-good-link:active .popular-pic {
     background-color: #f0c52e;
 }
 
-.popular-good-link:active .popular {
+.popular-good-link:active .popular-pic::before,
+.popular-good-link:active .popular-good-name {
     opacity: 0.3;
 }
 
@@ -722,6 +723,10 @@ a {
 
 .services-button-strip:hover {
     background-color: #f0c52e;
+}
+
+.delivery-btn:hover {
+    background-color: transparent;
 }
 
 .delivery-btn::after {
@@ -1091,19 +1096,23 @@ a {
 
 .main-wrapper {
     width: 100%;
-    display: flex;
 }
 
-.section-filter {
-    display: flex;
-    flex-direction: column;
-    align-content: flex-end;
-    width: 32.5%;
+.filter-products-space {
+    overflow: hidden;
+    background: linear-gradient(to right,#efefef 0%,#efefef 27%,#fff 30%,#fff 100%);
 }
 
-.filter {
-    background-color: #dcdcdc;
+.filter-sorting-wrapper {
     width: 100%;
+    overflow: hidden;
+    background: linear-gradient(to right,#dbdbdb 0%,#dbdbdb 49%,#ebebeb 50%,#ebebeb 100%);
+}
+
+.section-filter-sorting {
+    display: flex;
+    width: 1160px;
+    margin: 0 auto;
 }
 
 .filter-title {
@@ -1112,21 +1121,16 @@ a {
     font-size: 16px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    padding: 18px 180px 22px 0;
-    text-align: right;
-    margin: 0;
-}
-
-.filter-form-wrapper {
-    width: 100%;
-    background-color: #efefef;
-    display: flex;
-    justify-content: flex-end;
+    padding: 19px 180px 0 0;
+    margin: 0 0 0 60px;
+    width: 200px;
+    background-color: #dbdbdb;
 }
 
 .filter-form {
     width: 203px;
-    padding: 68px 67px 517px 0;
+    padding: 68px 67px 0 60px;
+    background-color: #efefef;
 }
 
 .filter-form .set-form {
@@ -1229,11 +1233,10 @@ a {
     color: black;
 }
 
-.sorting-products-wrapper {
+.filter-products-wrapper {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 67.5%;
+    width: 1160px;
+    margin: 0 auto;
 }
 
 .sorting-block {
@@ -1241,7 +1244,6 @@ a {
     display: flex;
     align-items: center;
     width: 100%;
-    padding-right: 140px;
     height: 70px;
 }
 
