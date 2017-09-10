@@ -168,6 +168,7 @@ a {
     padding-right: 40px;
     position: relative;
     margin: 0;
+    border-bottom: 2px solid transparent;
 }
 
 .search-field::placeholder {
@@ -193,30 +194,28 @@ a {
     margin: 0;
     position: relative;
     left: -5px;
-}
-
-.search-field:focus + .search-button {
     background: none;
     border: 2px solid black;
     line-height: 36px;
     padding: 0 15px;
+    line-height: 36px;
+    padding: 0 15px;
+}
+
+.search-field:focus + .search-button {
     visibility: visible;
 }
 
 .search-field:focus + .search-button:hover {
     background: black;
-    border: 2px solid black;
     color: white;
     visibility: visible;
 }
 
 .search-button:active {
     background: black;
-    border: 2px solid black;
     color: rgba(255, 255, 255, 0.3);
     visibility: visible;
-    line-height: 36px;
-    padding: 0 15px;
 }
 
 .header-products {
@@ -225,7 +224,7 @@ a {
 
 .header-caption {
     position: relative;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .header-caption::before {
@@ -247,7 +246,7 @@ a {
 .header-products:hover .products-list-wrapper,
 .products-list-wrapper:hover,
 .products-list-wrapper:active {
-    width: 1160px;
+    width: 1060px;
     padding: 12px 43px 38px 58px;
     background-color: #f7e296;
     position: absolute;
@@ -279,6 +278,10 @@ a {
     flex-direction: column;
     width: 540px;
     min-height: 220px;
+}
+
+.hidden {
+    display: none;
 }
 
 .inner-navigation {
@@ -494,6 +497,7 @@ a {
     position: relative;
     border: none;
     background: transparent;
+    cursor: pointer;
 }
 
 .slide-btn::before {
@@ -909,6 +913,9 @@ a {
 
 .map-link {
     display: block;
+    width: 560px;
+    height: 222px;
+    background-color: #e5e5e5;
     margin-bottom: 60px;
 }
 
@@ -1049,20 +1056,23 @@ a {
     padding: 0;
 }
 
-.crumb {
+.crumb-item {
     font-size: 14px;
     line-height: 36px;
-    opacity: 0.3;
     list-style-type: none;
     margin-right: 40px; 
     position: relative;
 }
 
-.crumb:not(:last-child):hover {
+.crumb{
+    opacity: 0.3;
+}
+
+.crumb:hover {
     opacity: 0.6;
 }
 
-.crumb:not(:last-child):active {
+.crumb:active {
     opacity: 0.1;
 }
 
@@ -1076,35 +1086,47 @@ a {
     background-image: url("../img/nav-arrow.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
+    opacity: 1;
 }
 
-.wrapper-filter-sorting {
+.main-wrapper {
+    width: 100%;
     display: flex;
-    width: 1440px;
-    margin: 0 auto;
 }
 
-.section-filter-sorting {
+.section-filter {
     display: flex;
-    width: 1440px;
+    flex-direction: column;
+    align-content: flex-end;
+    width: 32.5%;
 }
 
 .filter {
     background-color: #dcdcdc;
+    width: 100%;
+}
+
+.filter-title {
+    color: black; 
     font-family: "Gilroy ExtraBold", "Arial";
     font-size: 16px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: black;
-    width: 210px;
+    padding: 18px 180px 22px 0;
+    text-align: right;
     margin: 0;
-    padding: 19px 56px 20px 202px;
+}
+
+.filter-form-wrapper {
+    width: 100%;
+    background-color: #efefef;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .filter-form {
-    background-color: #efefef;
     width: 203px;
-    padding: 68px 67px 0 198px;
+    padding: 68px 67px 517px 0;
 }
 
 .filter-form .set-form {
@@ -1207,12 +1229,20 @@ a {
     color: black;
 }
 
+.sorting-products-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 67.5%;
+}
+
 .sorting-block {
     background-color: #ebebeb;
     display: flex;
     align-items: center;
-    width: 832px;
+    width: 100%;
     padding-right: 140px;
+    height: 70px;
 }
 
 .sorting {
@@ -1287,12 +1317,6 @@ a {
     opacity: 1;
 }
 
-.filter-products-wrapper {
-    display: flex;
-    width: 1440px;
-    margin: 0 auto;
-}
-
 .goods-catalog {
     width: 760px;
     display: flex;
@@ -1324,6 +1348,10 @@ a {
 
 .option input[type="checkbox"]:checked + .checkbox-indicator::before {
     display: none;
+}
+
+.option input[type="checkbox"]:active + .checkbox-indicator {
+    opacity: 1;
 }
 
 .option input[type="checkbox"]:checked + .checkbox-indicator::after {
