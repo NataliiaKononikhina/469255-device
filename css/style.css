@@ -1078,19 +1078,8 @@ a {
 
 .wrapper-filter-sorting {
     display: flex;
-    width: 100%;
-}
-
-.wrapper-filter-sorting .left {
-    flex: 1;
-    background-color: #dcdcdc;
-    height: 69px;
-}
-
-.wrapper-filter-sorting .right {
-    flex: 1;
-    background-color: #ebebeb;
-    height: 69px;
+    width: 1440px;
+    margin: 0 auto;
 }
 
 .section-filter-sorting {
@@ -1298,21 +1287,8 @@ a {
 
 .filter-products-wrapper {
     display: flex;
-    width: 100%;
-}
-
-.left-space {
-    flex: 1;
-    background-color: #efefef;
-}
-
-.right-space {
-    flex: 1;
-}
-
-.filter-products {
     width: 1440px;
-    display: flex;
+    margin: 0 auto;
 }
 
 .goods-catalog {
