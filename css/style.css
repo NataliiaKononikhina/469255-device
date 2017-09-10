@@ -96,9 +96,7 @@ a {
 
 .header {
     line-height: 36px;
-    margin: 0 auto;
     margin-top: 40px;
-    width: 1059px;
     position: relative;
     display: flex;
     padding: 40px 43px 40px 58px;
@@ -247,11 +245,11 @@ a {
 .header-products:hover .products-list-wrapper,
 .products-list-wrapper:hover,
 .products-list-wrapper:active {
-    width: 1060px;
-    padding: 12px 50px 38px 50px;
+    width: 1158px;
+    padding: 12px 43px 38px 58px;
     background-color: #f7e296;
     position: absolute;
-    left: -50px;
+    left: -57px;
     z-index: 100;
     display: block;
 }
@@ -659,7 +657,7 @@ a {
 
 .services-wraper {   
     position: relative;
-    width: 1440px;
+    width: 100%;
     min-height: 290px;
     background-color: #e5e5e5;
     margin: 0 auto;
@@ -1080,12 +1078,24 @@ a {
 
 .wrapper-filter-sorting {
     display: flex;
-    width: 1440px;
-    margin: 0 auto;
+    width: 100%;
+}
+
+.wrapper-filter-sorting .left {
+    flex: 1;
+    background-color: #dcdcdc;
+    height: 69px;
+}
+
+.wrapper-filter-sorting .right {
+    flex: 1;
+    background-color: #ebebeb;
+    height: 69px;
 }
 
 .section-filter-sorting {
     display: flex;
+    width: 1440px;
 }
 
 .filter {
@@ -1288,8 +1298,21 @@ a {
 
 .filter-products-wrapper {
     display: flex;
+    width: 100%;
+}
+
+.left-space {
+    flex: 1;
+    background-color: #efefef;
+}
+
+.right-space {
+    flex: 1;
+}
+
+.filter-products {
     width: 1440px;
-    margin: 0 auto;
+    display: flex;
 }
 
 .goods-catalog {
@@ -1547,7 +1570,7 @@ a {
     background-color: #464646;
     padding-top: 57px;
     padding-bottom: 60px;
-    width: 1440px;
+    width: 100%;
     margin: 0 auto;
 }
 
