@@ -68,7 +68,7 @@ a {
     background: transparent;
     z-index: 5;
     cursor:pointer;
-    width: 220px;
+    padding: 0 42px;
 }
 
 .button-strip::before {
@@ -702,11 +702,12 @@ a {
     line-height: 40px;
     text-transform: uppercase;
     text-align: center;
-    width: 160px;
+    min-width: 160px;
     height: 40px;
     display: block;
     border: none;
     background: transparent;
+    display: inline-block;
 }
 
 .services-button-strip::before {
@@ -909,7 +910,7 @@ a {
 }
 
 .button-about-us {
-    width: 260px;
+    padding: 0 21px;
 }
 
 .section-contacts {
@@ -925,7 +926,7 @@ a {
 }
 
 .button-contacts {
-    width: 260px;
+    padding: 0 38px;
 }
 
 .map {
@@ -979,7 +980,7 @@ a {
 .write-to-us {
     background-color: white;
     width: 760px;
-    padding: 95px 100px 75px 100px;
+    padding: 97px 100px 75px 100px;
     box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
     position: fixed;
     top: 120px;
@@ -1014,7 +1015,7 @@ a {
     color: rgba(70, 70, 70, 0.4);
     background-color: #f2f2f2;
     border: none;
-    padding: 15px 20px;
+    padding: 14px 19px;
     margin-top: 10px;
     border: 3px solid transparent;
 }
@@ -1028,7 +1029,7 @@ a {
     display: flex;
     flex-direction: column;
     margin-top: 35px;
-    margin-bottom: 40px;
+    margin-bottom: 42px;
 }
 
 .text:hover {
@@ -1044,6 +1045,10 @@ a {
 .text:invalid {
     background-color: #f6dada;
     opacity: 0.5;
+}
+
+.feed-back-button {
+    padding: 0 33px;
 }
 
 /* ========inner.html=========*/
@@ -1409,10 +1414,6 @@ a {
 
 .option input[type="radio"]:checked:hover + .radio-indicator::after {
     opacity: 0.6;
-}
-
-.button-form {
-    width: 200px;
 }
 
 .catalog {
