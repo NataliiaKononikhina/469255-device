@@ -96,12 +96,14 @@ a {
 
 .header {
     line-height: 36px;
+    margin: 0 auto;
     margin-top: 40px;
     position: relative;
     display: flex;
     padding: 40px 43px 40px 58px;
     justify-content: space-between;
     background-color: #f7e296;
+    width: 1160px;
 }
 
 .header-logo {
@@ -245,11 +247,11 @@ a {
 .header-products:hover .products-list-wrapper,
 .products-list-wrapper:hover,
 .products-list-wrapper:active {
-    width: 1158px;
+    width: 1160px;
     padding: 12px 43px 38px 58px;
     background-color: #f7e296;
     position: absolute;
-    left: -57px;
+    left: -58px;
     z-index: 100;
     display: block;
 }
