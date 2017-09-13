@@ -536,7 +536,7 @@ a {
     position: absolute;
     margin: 0;
     padding: 0;
-    top: 307px;
+    top: 319px;
     right: 83px;
 }
 
@@ -545,6 +545,8 @@ a {
     border: none;
     background: transparent;
     cursor: pointer;
+    widows: 15px;
+    height: 15px;
 }
 
 .slide-btn::before {
@@ -1287,7 +1289,7 @@ a {
 
 .filter-form {
     width: 203px;
-    padding: 68px 67px 0 60px;
+    padding: 68px 65px 0 60px;
     background-color: #efefef;
 }
 
