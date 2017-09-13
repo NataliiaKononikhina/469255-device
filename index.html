@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Device</title>
-        <link href="css/style.css" rel="stylesheet">
+        <link href="css/style_compressed.css" rel="stylesheet">
     </head>
     <body>
         <header class="header">
@@ -283,7 +283,7 @@
             </div>
                 
             <section class="map">
-                <button class="modal-close">
+                <button class="modal-close map-close">
                     <span class="visually-hidden">Закрыть</span>>
                 </button>
                 <h2 class="visually-hidden">Как нас найти</h2>
@@ -291,21 +291,21 @@
             </section>
 
             <section class="write-to-us">
-                <button class="modal-close">
+                <button class="modal-close feed-back-close">
                     <span class="visually-hidden">Закрыть</span>
                 </button>
                 <h2 class="visually-hidden">Напишите нам</h2>
                 <form>
                     <div class="feed-back-wrapper">
                         <label class="feed-back">
-                            Ваше имя:<input type="text" placeholder="Представьтесь, пожалуйста" class="text">
+                            Ваше имя:<input type="text" placeholder="Представьтесь, пожалуйста" class="text your-name">
                         </label>
                         <label class="feed-back">
-                            Ваш e-mail:<input type="email" placeholder="Для отпраки ответа" class="text">
+                            Ваш e-mail:<input type="email" placeholder="Для отпраки ответа" class="text your-mail">
                         </label>
                     </div>
                     <label class="feed-back-leter">
-                        Текст письма:<textarea rows="7" placeholder="В свободной форме" class="text"></textarea>
+                        Текст письма:<textarea rows="7" placeholder="В свободной форме" class="text your-leter"></textarea>
                     </label>
                     <button type="submit" class="button-strip feed-back-button">Отправить</button>
                 </form>
@@ -376,5 +376,6 @@
                 </div>
             </div>
         </footer>
+        <script src="js/compressed.js"></script>
     </body>
 </html>
