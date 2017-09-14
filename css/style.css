@@ -1643,7 +1643,7 @@ a {
 .background-for-buttons {
     background-color: rgba(238, 238, 238, 0.7);
     width: 360px;
-    min-height: 380px;
+    height: 380px;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
